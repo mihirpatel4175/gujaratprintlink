@@ -1,130 +1,449 @@
-const container =
-document.getElementById("productsContainer");
+/* =====================================
+   GUJARAT PRINTLINK
+   PRODUCT SYSTEM V1
+===================================== */
 
-const filters =
-document.getElementById("categoryFilters");
+const productsContainer =
+    document.getElementById("productsContainer");
+
+const categoryFilters =
+    document.getElementById("categoryFilters");
 
 const searchInput =
-document.getElementById("productSearch");
+    document.getElementById("productSearch");
 
-let activeCategory = "All";
+/* =====================================
+   GLOBAL STATE
+===================================== */
 
-const categories = [
-    "All",
-    ...new Set(
-        products.map(item => item.category)
-    )
-];
+let currentCategory = "All";
 
-function createFilters(){
+/* =====================================
+   GENERATE CATEGORIES
+===================================== */
+
+function generateCategories() {
+
+    if (!categoryFilters) return;
+
+    const categories = [
+
+        "All",
+
+        ...new Set(
+            products.map(
+                product => product.category
+            )
+        )
+
+    ];
+
+    categoryFilters.innerHTML = "";
 
     categories.forEach(category => {
 
         const button =
-        document.createElement("button");
+            document.createElement("button");
 
         button.className =
-        "filter-btn";
+            category === "All"
+                ? "filter-btn active"
+                : "filter-btn";
 
         button.innerText =
-        category;
+            category;
 
-        button.onclick = () => {
+        button.addEventListener(
+            "click",
+            () => {
 
-            activeCategory = category;
+                document
+                    .querySelectorAll(".filter-btn")
+                    .forEach(btn =>
+                        btn.classList.remove("active")
+                    );
 
-            document
-            .querySelectorAll(".filter-btn")
-            .forEach(btn =>
-                btn.classList.remove("active")
-            );
+                button.classList.add("active");
 
-            button.classList.add("active");
+                currentCategory =
+                    category;
 
-            renderProducts();
+                renderProducts();
 
-        };
+            }
+        );
 
-        filters.appendChild(button);
+        categoryFilters.appendChild(
+            button
+        );
 
     });
 
-    filters.firstChild.classList.add("active");
 }
 
-function renderProducts(){
+/* =====================================
+   PRODUCT CARD
+===================================== */
 
-    const search =
-    searchInput.value.toLowerCase();
+function createProductCard(product) {
 
-    let filtered =
-    products.filter(product => {
+    return `
 
-        const categoryMatch =
-        activeCategory === "All" ||
-        product.category === activeCategory;
+    <div class="col-lg-4 col-md-6 mb-4">
 
-        const searchMatch =
-        product.name
-        .toLowerCase()
-        .includes(search);
+        <div class="product-card">
 
-        return categoryMatch &&
-               searchMatch;
+            <img
+            src="${product.image}"
+            alt="${product.name}"
+            class="product-image"
 
-    });
+            onerror="
+            this.src='https://placehold.co/600x400/111111/D4AF37?text=Gujarat+Printlink'
+            ">
 
-    container.innerHTML = "";
+            <div class="product-content">
 
-    filtered.forEach(product => {
+                <span class="product-category">
 
-        container.innerHTML += `
-        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    ${product.category}
 
-            <div class="product-card">
+                </span>
 
-                <img
-                    src="${product.image}"
-                    class="product-image"
-                    alt="${product.name}">
+                <h4>
 
-                <div class="p-3">
+                    ${product.name}
 
-                    <span class="product-category">
-                        ${product.category}
-                    </span>
+                </h4>
 
-                    <h5 class="mt-3">
-                        ${product.name}
-                    </h5>
+                <p>
 
-                    <div class="mt-3">
+                    ${product.description}
 
-                        <a
-                        href="https://wa.me/919999999999"
-                        target="_blank"
-                        class="btn btn-warning btn-sm">
+                </p>
 
-                        Inquiry
+                <div class="product-buttons">
 
-                        </a>
+                    <button
+                    class="btn btn-dark"
 
-                    </div>
+                    onclick="openProductModal(${product.id})">
+
+                    View Details
+
+                    </button>
+
+                    <a
+
+                    href="${generateWhatsAppLink(product.name)}"
+
+                    target="_blank"
+
+                    class="btn btn-gold">
+
+                    Inquiry
+
+                    </a>
 
                 </div>
 
             </div>
 
         </div>
+
+    </div>
+
+    `;
+
+}
+
+/* =====================================
+   RENDER PRODUCTS
+===================================== */
+
+function renderProducts() {
+
+    if (!productsContainer) return;
+
+    const searchText =
+        searchInput
+            ? searchInput.value.toLowerCase()
+            : "";
+
+    const filteredProducts =
+        products.filter(product => {
+
+            const categoryMatch =
+
+                currentCategory === "All"
+
+                ||
+
+                product.category === currentCategory;
+
+            const searchMatch =
+
+                product.name
+                    .toLowerCase()
+                    .includes(searchText)
+
+                ||
+
+                product.category
+                    .toLowerCase()
+                    .includes(searchText)
+
+                ||
+
+                product.description
+                    .toLowerCase()
+                    .includes(searchText);
+
+            return categoryMatch &&
+                searchMatch;
+
+        });
+
+    productsContainer.innerHTML = "";
+
+    /* PRODUCT COUNT */
+
+    const countDiv =
+        document.createElement("div");
+
+    countDiv.className =
+        "col-12 mb-4";
+
+    countDiv.innerHTML = `
+
+        <div class="alert alert-dark">
+
+            Showing
+
+            <strong>
+
+                ${filteredProducts.length}
+
+            </strong>
+
+            Products & Services
+
+        </div>
+
+    `;
+
+    productsContainer.appendChild(
+        countDiv
+    );
+
+    /* NO RESULT */
+
+    if (filteredProducts.length === 0) {
+
+        productsContainer.innerHTML += `
+
+        <div class="col-12 text-center">
+
+            <h4>
+
+                No Products Found
+
+            </h4>
+
+            <p>
+
+                Try another keyword.
+
+            </p>
+
+        </div>
+
         `;
+
+        return;
+
+    }
+
+    /* PRODUCTS */
+
+    filteredProducts.forEach(product => {
+
+        productsContainer.innerHTML +=
+            createProductCard(product);
+
     });
 
 }
 
-searchInput.addEventListener(
-    "keyup",
-    renderProducts
+/* =====================================
+   SEARCH
+===================================== */
+
+if (searchInput) {
+
+    searchInput.addEventListener(
+        "input",
+        renderProducts
+    );
+
+}
+
+/* =====================================
+   WHATSAPP
+===================================== */
+
+function generateWhatsAppLink(productName) {
+
+    const message =
+
+        `Hello Gujarat Printlink,
+        I am interested in:
+        ${productName}
+        Please share details and quotation.
+        Thank You.`;
+
+    return `https://wa.me/918849426648?text=${encodeURIComponent(message)}`;
+
+}
+
+/* =====================================
+   MODAL
+===================================== */
+
+function openProductModal(productId) {
+
+    const product =
+
+        products.find(
+            item => item.id === productId
+        );
+
+    if (!product) return;
+
+    const modalTitle =
+        document.getElementById("modalTitle");
+
+    const modalContent =
+        document.getElementById("modalContent");
+
+    modalTitle.innerText =
+        product.name;
+
+    modalContent.innerHTML = `
+
+        <img
+        src="${product.image}"
+
+        class="img-fluid rounded mb-4"
+
+        alt="${product.name}"
+
+        onerror="
+        this.src='https://placehold.co/800x500/111111/D4AF37?text=Gujarat+Printlink'
+        ">
+
+        <p>
+
+            ${product.description}
+
+        </p>
+
+        <hr>
+
+        <h5>
+
+            Features
+
+        </h5>
+
+        <ul>
+
+            ${product.features
+            .map(
+                feature =>
+
+                    `<li>${feature}</li>`
+            )
+            .join("")}
+
+        </ul>
+
+        <hr>
+
+        <p>
+
+            <strong>
+
+                Minimum Qty :
+
+            </strong>
+
+            ${product.minimumQty}
+
+        </p>
+
+        <div class="d-flex flex-wrap gap-2 mt-4">
+
+            <a
+            href="${product.pdf}"
+
+            target="_blank"
+
+            class="btn btn-dark">
+
+            Download Catalogue
+
+            </a>
+
+            <a
+
+            href="${generateWhatsAppLink(product.name)}"
+
+            target="_blank"
+
+            class="btn btn-gold">
+
+            WhatsApp Inquiry
+
+            </a>
+
+        </div>
+
+    `;
+
+    const modal =
+
+        new bootstrap.Modal(
+
+            document.getElementById(
+                "productModal"
+            )
+
+        );
+
+    modal.show();
+
+}
+
+/* =====================================
+   INITIAL LOAD
+===================================== */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+
+        generateCategories();
+
+        renderProducts();
+
+    }
 );
 
-createFilters();
-renderProducts();
+/* =====================================
+   CONSOLE
+===================================== */
+
+console.log(
+    "Gujarat Printlink Product System Loaded"
+);
