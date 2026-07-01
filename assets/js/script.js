@@ -85,11 +85,13 @@ function generateCategories() {
    PRODUCT CARD
 ===================================== */
 
-function createProductCard(product) {
+function createProductCard(product){
 
     return `
 
-    <div class="col-lg-4 col-md-6 mb-4">
+    <div
+        class="col-lg-4 col-md-6 mb-4"
+        id="product-${product.id}">
 
         <div class="product-card">
 
@@ -99,7 +101,7 @@ function createProductCard(product) {
             class="product-image"
 
             onerror="
-            this.src='https://placehold.co/600x400/111111/D4AF37?text=Gujarat+Printlink'
+            this.src='https://placehold.co/600x400/f8fafc/0072ff?text=Gujarat+Printlink'
             ">
 
             <div class="product-content">
@@ -134,11 +136,8 @@ function createProductCard(product) {
                     </button>
 
                     <a
-
                     href="${generateWhatsAppLink(product.name)}"
-
                     target="_blank"
-
                     class="btn btn-gold">
 
                     Inquiry
@@ -216,7 +215,7 @@ function renderProducts() {
 
     countDiv.innerHTML = `
 
-        <div class="alert alert-dark">
+        <div class="products-count-alert">
 
             Showing
 
@@ -279,12 +278,119 @@ function renderProducts() {
    SEARCH
 ===================================== */
 
-if (searchInput) {
+const suggestionBox =
+document.getElementById("searchSuggestions");
 
-    searchInput.addEventListener(
-        "input",
-        renderProducts
+searchInput.addEventListener("keyup", function(){
+
+    const keyword =
+    this.value.toLowerCase().trim();
+
+    if(keyword===""){
+
+        suggestionBox.style.display="none";
+        return;
+
+    }
+
+    const results =
+
+    products.filter(product=>
+
+        product.name.toLowerCase().includes(keyword)
+
+        ||
+
+        product.category.toLowerCase().includes(keyword)
+
     );
+
+    suggestionBox.innerHTML="";
+
+    if(results.length===0){
+
+        suggestionBox.style.display="none";
+
+        return;
+
+    }
+
+    results.forEach(product=>{
+
+        suggestionBox.innerHTML +=
+
+        `
+        <div class="search-item"
+             onclick="goToProduct(${product.id})">
+
+            <div>
+
+                <div class="search-name">
+
+                    ${product.name}
+
+                </div>
+
+            </div>
+
+            <div class="search-category">
+
+                ${product.category}
+
+            </div>
+
+        </div>
+        `;
+
+    });
+
+    suggestionBox.style.display="block";
+
+});
+
+function goToProduct(id){
+
+    suggestionBox.style.display="none";
+
+    searchInput.value="";
+
+    currentCategory="All";
+
+    renderProducts();
+
+    setTimeout(()=>{
+
+        const card =
+
+        document.getElementById(
+
+            "product-"+id
+
+        );
+
+        if(card){
+
+            card.scrollIntoView({
+
+                behavior:"smooth",
+
+                block:"center"
+
+            });
+
+            card.style.transition=".4s";
+
+            card.style.boxShadow="0 0 0 4px #D4AF37";
+
+            setTimeout(()=>{
+
+                card.style.boxShadow="";
+
+            },2000);
+
+        }
+
+    },100);
 
 }
 
@@ -339,7 +445,7 @@ function openProductModal(productId) {
         alt="${product.name}"
 
         onerror="
-        this.src='https://placehold.co/800x500/111111/D4AF37?text=Gujarat+Printlink'
+        this.src='https://placehold.co/800x500/f8fafc/0072ff?text=Gujarat+Printlink'
         ">
 
         <p>
@@ -446,4 +552,495 @@ document.addEventListener(
 
 console.log(
     "Gujarat Printlink Product System Loaded"
+);
+
+/*====================================
+      PREMIUM COUNTER
+====================================*/
+
+function animateValue(element,target,suffix){
+
+    const duration = 2200;
+
+    const start = performance.now();
+
+    function easeOutExpo(x){
+
+        return x===1
+
+        ?1
+
+        :1-Math.pow(2,-10*x);
+
+    }
+
+    function update(now){
+
+        const progress =
+
+        Math.min(
+
+            (now-start)/duration,
+
+            1
+
+        );
+
+        const eased =
+
+        easeOutExpo(progress);
+
+        const value =
+
+        Math.floor(
+
+            eased*target
+
+        );
+
+        element.textContent =
+
+        value + suffix;
+
+        if(progress<1){
+
+            requestAnimationFrame(update);
+
+        }
+
+    }
+
+    requestAnimationFrame(update);
+
+}
+
+/*====================================
+    STATS OBSERVER
+====================================*/
+
+const statCards =
+document.querySelectorAll(".stat-card");
+
+let played=false;
+
+const statsObserver =
+
+new IntersectionObserver(entries=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting && !played){
+
+            played=true;
+
+            statCards.forEach((card,index)=>{
+
+                setTimeout(()=>{
+
+                    card.classList.add("show");
+
+                },index*180);
+
+            });
+
+            document
+
+            .querySelectorAll(".counter")
+
+            .forEach(counter=>{
+
+                animateValue(
+
+                    counter,
+
+                    Number(counter.dataset.target),
+
+                    "+"
+
+                );
+
+            });
+
+            document
+
+            .querySelectorAll(".counter-percent")
+
+            .forEach(counter=>{
+
+                animateValue(
+
+                    counter,
+
+                    Number(counter.dataset.target),
+
+                    "%"
+
+                );
+
+            });
+
+        }
+
+    });
+
+},{
+    threshold:.35
+});
+
+statsObserver.observe(
+
+document.querySelector("#stats")
+
+);
+
+/*==================================
+      HERO PARALLAX
+==================================*/
+
+const heroImage =
+document.querySelector(".hero-image");
+
+document.addEventListener("mousemove",e=>{
+
+    const x =
+    (window.innerWidth/2-e.clientX)/40;
+
+    const y =
+    (window.innerHeight/2-e.clientY)/40;
+
+    heroImage.style.transform=
+
+    `translate(${x}px,${y}px)`;
+
+});
+
+/*==================================================
+        PREMIUM NAVIGATION SYSTEM
+==================================================*/
+
+const navbar = document.querySelector(".custom-navbar");
+const progressBar = document.getElementById("progressBar");
+
+let lastScroll = 0;
+
+/*----------------------------------------
+    NAVBAR SCROLL EFFECT
+----------------------------------------*/
+
+window.addEventListener("scroll", () => {
+
+    const currentScroll = window.pageYOffset;
+
+    /* Navbar Background */
+
+    if(currentScroll > 80){
+
+        navbar.classList.add("scrolled");
+
+    }
+
+    else{
+
+        navbar.classList.remove("scrolled");
+
+    }
+
+    /* Hide While Scrolling Down */
+
+    if(currentScroll > lastScroll && currentScroll > 150){
+
+        navbar.classList.add("nav-hidden");
+
+    }
+
+    else{
+
+        navbar.classList.remove("nav-hidden");
+
+    }
+
+    lastScroll = currentScroll;
+
+});
+
+/*----------------------------------------
+    SCROLL PROGRESS BAR
+----------------------------------------*/
+
+window.addEventListener("scroll", () => {
+
+    const scrollTop =
+
+    document.documentElement.scrollTop;
+
+    const height =
+
+    document.documentElement.scrollHeight -
+
+    document.documentElement.clientHeight;
+
+    const progress =
+
+    (scrollTop / height) * 100;
+
+    progressBar.style.width =
+
+    progress + "%";
+
+});
+
+/*----------------------------------------
+    ACTIVE MENU
+----------------------------------------*/
+
+const sections =
+
+document.querySelectorAll("section");
+
+const navLinks =
+
+document.querySelectorAll(".navbar-nav a");
+
+window.addEventListener("scroll",()=>{
+
+    let current = "";
+
+    sections.forEach(section=>{
+
+        const top =
+
+        section.offsetTop - 120;
+
+        const height =
+
+        section.offsetHeight;
+
+        if(window.pageYOffset >= top){
+
+            current = section.getAttribute("id");
+
+        }
+
+    });
+
+    navLinks.forEach(link=>{
+
+        link.classList.remove("active");
+
+        if(
+
+            link.getAttribute("href")
+
+            == "#" + current
+
+        ){
+
+            link.classList.add("active");
+
+        }
+
+    });
+
+});
+
+/*----------------------------------------
+    SMOOTH SCROLL
+----------------------------------------*/
+
+document
+
+.querySelectorAll('a[href^="#"]')
+
+.forEach(anchor=>{
+
+    anchor.addEventListener("click",
+
+    function(e){
+
+        e.preventDefault();
+
+        const target =
+
+        document.querySelector(
+
+        this.getAttribute("href")
+
+        );
+
+        if(target){
+
+            target.scrollIntoView({
+
+                behavior:"smooth",
+
+                block:"start"
+
+            });
+
+        }
+
+    });
+
+});
+
+/*----------------------------------------
+    CLOSE MOBILE MENU
+----------------------------------------*/
+
+document
+
+.querySelectorAll(".offcanvas a")
+
+.forEach(link=>{
+
+    link.addEventListener("click",()=>{
+
+        const menu =
+
+        bootstrap.Offcanvas.getInstance(
+
+        document.getElementById("mobileMenu")
+
+        );
+
+        if(menu){
+
+            menu.hide();
+
+        }
+
+    });
+
+});
+
+/*----------------------------------------
+    LOGO SCALE
+----------------------------------------*/
+
+window.addEventListener("scroll",()=>{
+
+    const logo =
+
+    document.querySelector(".logo-icon");
+
+    if(window.scrollY>80){
+
+        logo.style.transform="scale(.88)";
+
+    }
+
+    else{
+
+        logo.style.transform="scale(1)";
+
+    }
+
+});
+
+/*----------------------------------------
+    MEGA MENU DELAY
+----------------------------------------*/
+
+const megaParent =
+
+document.querySelector(".mega-parent");
+
+const megaMenu =
+
+document.querySelector(".mega-menu");
+
+if(megaParent){
+
+    let timer;
+
+    megaParent.addEventListener(
+
+    "mouseenter",()=>{
+
+        clearTimeout(timer);
+
+        megaMenu.style.display="block";
+
+    });
+
+    megaParent.addEventListener(
+
+    "mouseleave",()=>{
+
+        timer =
+
+        setTimeout(()=>{
+
+            megaMenu.style.display="";
+
+        },200);
+
+    });
+
+}
+
+/*----------------------------------------
+    HERO PARALLAX
+----------------------------------------*/
+
+const hero =
+
+document.querySelector(".hero-image");
+
+document.addEventListener(
+
+"mousemove",
+
+e=>{
+
+    if(!hero) return;
+
+    const x =
+
+    (window.innerWidth/2-e.clientX)/50;
+
+    const y =
+
+    (window.innerHeight/2-e.clientY)/50;
+
+    hero.style.transform =
+
+    `translate(${x}px,${y}px)`;
+
+});
+
+/*----------------------------------------
+    NAVBAR SHADOW ON HOVER
+----------------------------------------*/
+
+navbar.addEventListener(
+
+"mouseenter",()=>{
+
+    navbar.style.boxShadow=
+
+    "0 18px 45px rgba(0,0,0,.08)";
+
+});
+
+navbar.addEventListener(
+
+"mouseleave",()=>{
+
+    if(window.scrollY<80){
+
+        navbar.style.boxShadow="";
+
+    }
+
+});
+
+/*----------------------------------------
+    CONSOLE
+----------------------------------------*/
+
+console.log(
+
+"Premium Navigation Loaded"
+
 );
