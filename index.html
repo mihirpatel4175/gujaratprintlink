@@ -3,214 +3,316 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>
-Gujarat Printlink
-</title>
+    <title>
+        Gujarat Printlink
+    </title>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
-      rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
-<link rel="stylesheet"
-      href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
+    <!-- ================= NAVBAR ================= -->
 
-<div id="progressBar"></div>
+    <div id="progressBar"></div>
 
-<nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+    <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
 
-    <div class="container">
+        <div class="container">
 
-        <!-- Logo -->
+            <!-- Logo -->
 
-        <a class="navbar-brand" href="#hero">
+            <a class="navbar-brand" href="#hero">
 
-            <img
-            src="assets/images/logo/favicon.png"
-            class="logo-icon">
+                <img src="assets/images/logo/favicon.png" class="logo-icon">
 
-            <span>
+                <span>
+
+                    Gujarat Printlink
+
+                </span>
+
+            </a>
+
+            <!-- Mobile Button -->
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#mobileMenu">
+
+                ☰
+
+            </button>
+
+            <!-- Desktop Menu -->
+
+            <div class="collapse navbar-collapse">
+
+                <ul class="navbar-nav ms-auto align-items-center">
+
+                    <li>
+
+                        <a href="#hero">
+
+                            Home
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="#about">
+
+                            About
+
+                        </a>
+
+                    </li>
+
+                    <li class="mega-parent">
+
+                        <a href="#products">
+
+                            Products
+
+                        </a>
+
+                        <div class="mega-menu">
+
+                            <div class="mega-grid" id="megaMenuContainer">
+
+                            </div>
+
+                        </div>
+
+                    </li>
+
+                    <li>
+
+                        <a href="#clients">
+
+                            Our Valuable Clients
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="#contact">
+
+                            Contact
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="https://wa.me/918849426648" target="_blank" class="quote-btn">
+
+                            Get Quote
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <div class="offcanvas offcanvas-end" id="mobileMenu">
+
+        <div class="offcanvas-header">
+
+            <h4>
 
                 Gujarat Printlink
 
-            </span>
+            </h4>
 
-        </a>
+            <button class="btn-close" data-bs-dismiss="offcanvas">
 
-        <!-- Mobile Button -->
+            </button>
 
-        <button
-        class="navbar-toggler border-0"
+        </div>
 
-        type="button"
+        <div class="offcanvas-body">
 
-        data-bs-toggle="offcanvas"
+            <a href="#hero">Home</a>
 
-        data-bs-target="#mobileMenu">
+            <a href="#about">About</a>
 
-            ☰
+            <a href="#clients">Our Valuable Clients</a>
 
-        </button>
+            <a href="#products">Products</a>
 
-        <!-- Desktop Menu -->
+            <a href="#contact">Contact</a>
 
-        <div class="collapse navbar-collapse">
+            <a href="https://wa.me/918849426648" class="btn btn-warning mt-4">
 
-            <ul class="navbar-nav ms-auto align-items-center">
+                Get Quote
 
-                <li>
+            </a>
 
-                    <a href="#about">
+        </div>
 
-                        About
+    </div>
 
-                    </a>
+    <!-- HERO -->
 
-                </li>
+    <!-- ==========================================================
+     HERO SECTION
+=========================================================== -->
 
-                <li>
+    <section id="hero">
 
-                    <a href="#services">
+        <!-- Background Slider -->
 
-                        Services
+        <div class="hero-slider">
 
-                    </a>
+            <div class="hero-slide active"></div>
+            <div class="hero-slide"></div>
+            <div class="hero-slide"></div>
+            <div class="hero-slide"></div>
 
-                </li>
+            <!-- Background Particles -->
 
-                <li class="mega-parent">
+            <div class="hero-particles">
 
-                    <a href="#products">
+                <span style="left:8%;animation-delay:0s;"></span>
+                <span style="left:20%;animation-delay:2s;"></span>
+                <span style="left:35%;animation-delay:4s;"></span>
+                <span style="left:50%;animation-delay:1s;"></span>
+                <span style="left:65%;animation-delay:5s;"></span>
+                <span style="left:80%;animation-delay:3s;"></span>
+                <span style="left:92%;animation-delay:6s;"></span>
 
-                        Products
+            </div>
 
-                    </a>
+        </div>
 
-                    <div class="mega-menu">
+        <div class="container">
 
-                        <div class="mega-grid">
+            <div class="row hero-row">
 
-                            <div>
+                <!-- ==========================================
+                 HERO CONTENT
+            =========================================== -->
 
-                                <h6>
+                <div class="col-lg-6">
 
-                                    Business Printing
+                    <div class="hero-content">
 
-                                </h6>
+                        <div class="hero-badge fade-up delay-1">
 
-                                <a href="#products">
+                            <i class="fas fa-award"></i>
 
-                                    Business Cards
+                            30+ Years of Printing Excellence
 
-                                </a>
+                        </div>
 
-                                <a href="#products">
+                        <h1 class="fade-up delay-2">
 
-                                    Letterheads
+                            Premium
 
-                                </a>
+                            <span class="gradient-text">
 
-                                <a href="#products">
+                                Printing, Packaging
 
-                                    Envelopes
+                            </span>
 
-                                </a>
+                            & Branding Solutions
+
+                        </h1>
+
+                        <p class="hero-tagline fade-up delay-3">
+
+                            "You Think. We Print."
+
+                        </p>
+
+                        <p class="fade-up delay-4">
+
+                            Gujarat Printlink delivers premium-quality printing,
+                            packaging, branding, and digital solutions trusted by
+                            hundreds of businesses, manufacturers, and corporate
+                            clients across Gujarat for more than three decades.
+
+                        </p>
+
+                        <!-- Buttons -->
+
+                        <div class="hero-buttons fade-up delay-5">
+
+                            <a href="#products" class="btn-gold">
+
+                                <i class="fas fa-box-open"></i>
+
+                                Explore Products
+
+                            </a>
+
+                        </div>
+
+                        <!-- Search -->
+
+                        <div class="hero-search fade-up delay-5">
+
+                            <input type="text" id="productSearch"
+                                placeholder="Search products, packaging, printing services...">
+
+                            <i class="fas fa-search"></i>
+
+                            <div id="searchSuggestions" class="search-suggestions">
 
                             </div>
 
-                            <div>
+                        </div>
 
-                                <h6>
+                        <!-- Trust -->
 
-                                    Marketing
+                        <div class="hero-trust fade-up delay-5">
 
-                                </h6>
+                            <div class="hero-trust-item">
 
-                                <a href="#products">
+                                <i class="fas fa-check-circle"></i>
 
-                                    Flyers
-
-                                </a>
-
-                                <a href="#products">
-
-                                    Brochures
-
-                                </a>
-
-                                <a href="#products">
-
-                                    Catalogues
-
-                                </a>
+                                <span>30+ Years Experience</span>
 
                             </div>
 
-                            <div>
+                            <div class="hero-trust-item">
 
-                                <h6>
+                                <i class="fas fa-users"></i>
 
-                                    Packaging
-
-                                </h6>
-
-                                <a href="#products">
-
-                                    Mono Cartons
-
-                                </a>
-
-                                <a href="#products">
-
-                                    Corrugated Boxes
-
-                                </a>
-
-                                <a href="#products">
-
-                                    Product Boxes
-
-                                </a>
+                                <span>100+ Corporate Clients</span>
 
                             </div>
 
-                            <div>
+                            <div class="hero-trust-item">
 
-                                <h6>
+                                <i class="fas fa-shipping-fast"></i>
 
-                                    Digital
-
-                                </h6>
-
-                                <a href="#products">
-
-                                    Branding
-
-                                </a>
-
-                                <a href="#products">
-
-                                    Website
-
-                                </a>
-
-                                <a href="#products">
-
-                                    AI Marketing
-
-                                </a>
+                                <span>Fast Delivery</span>
 
                             </div>
 
@@ -218,228 +320,117 @@ Gujarat Printlink
 
                     </div>
 
-                </li>
-
-                <li>
-
-                    <a href="#portfolio">
-
-                        Portfolio
-
-                    </a>
-
-                </li>
-
-                <li>
-
-                    <a href="#contact">
-
-                        Contact
-
-                    </a>
-
-                </li>
-
-                <li>
-
-                    <a
-
-                    href="https://wa.me/918849426648"
-
-                    target="_blank"
-
-                    class="quote-btn">
-
-                        Get Quote
-
-                    </a>
-
-                </li>
-
-            </ul>
-
-        </div>
-
-    </div>
-
-</nav>
-
-<div class="offcanvas offcanvas-end" id="mobileMenu">
-
-    <div class="offcanvas-header">
-
-        <h4>
-
-            Gujarat Printlink
-
-        </h4>
-
-        <button
-
-        class="btn-close"
-
-        data-bs-dismiss="offcanvas">
-
-        </button>
-
-    </div>
-
-    <div class="offcanvas-body">
-
-        <a href="#about">About</a>
-
-        <a href="#services">Services</a>
-
-        <a href="#products">Products</a>
-
-        <a href="#portfolio">Portfolio</a>
-
-        <a href="#contact">Contact</a>
-
-        <a
-
-        href="https://wa.me/918849426648"
-
-        class="btn btn-warning mt-4">
-
-            Get Quote
-
-        </a>
-
-    </div>
-
-</div>
-
-<!-- HERO -->
-
-<section id="hero">
-
-    <div class="container">
-
-        <div class="row align-items-center">
-
-            <div class="col-lg-6">
-
-                <span class="hero-badge">
-
-                    30+ Years Experience
-
-                </span>
-
-                <h1>
-                    Premium <span class="text-gradient">Printing, Packaging & Branding</span> Solutions
-                </h1>
-
-                <p class="hero-tagline mb-2">
-                    "You Think we Print!"
-                </p>
-
-                <p>
-                    Trusted by thousands of businesses across Gujarat.
-                </p>
-
-                <div class="hero-buttons">
-
-                    <a href="#products"
-                       class="btn btn-gold">
-
-                        Explore Products
-
-                    </a>
-
-                    <a href="#contact"
-                       class="btn btn-dark-custom">
-
-                        Contact Us
-
-                    </a>
-
                 </div>
 
-                <div class="hero-search position-relative">
+                <!-- ==========================================
+                 HERO IMAGE
+            =========================================== -->
 
-                    <input
-                        type="text"
-                        id="productSearch"
-                        class="form-control"
-                        placeholder="Search products, services, packaging...">
+                <div class="col-lg-6">
 
-                    <div id="searchSuggestions"
-                         class="search-suggestions">
+                    <div class="hero-image">
+
+                        <div class="hero-image-glow"></div>
+
+                        <div class="hero-circle one"></div>
+
+                        <div class="hero-circle two"></div>
+
+                        <div class="hero-dots"></div>
+
+                        <!-- Main Hero Card -->
+
+                        <div class="hero-image-card">
+
+                            <img src="assets/images/hero/hero-banner.jpg" alt="Premium Printing Services"
+                                loading="eager" class="img-fluid">
+
+                        </div>
+
+                        <!-- Floating Card -->
+
+                        <div class="hero-floating-card bottom">
+
+                            <i class="fas fa-check-circle"></i>
+
+                            <div>
+
+                                <h6>100+ Clients</h6>
+
+                                <p>Trusted Businesses</p>
+
+                            </div>
+
+                        </div>
+
                     </div>
 
                 </div>
 
             </div>
 
-            <div class="col-lg-6">
+        </div>
 
-                <img
-                    src="assets/images/hero/hero-banner.jpg"
-                    class="img-fluid hero-image">
+        <!-- Scroll -->
 
-            </div>
+        <div class="scroll-indicator">
+
+            <span></span>
 
         </div>
 
-    </div>
-    <div class="scroll-indicator">
+    </section>
+    <!-- STATS -->
 
-        <span></span>
+    <section id="stats">
 
-    </div>
+        <div class="container">
 
-</section>
+            <div class="row">
 
-<!-- STATS -->
+                <div class="col-md-3">
 
-<section id="stats">
+                    <div class="stat-card">
 
-    <div class="container">
+                        <h2 class="counter" data-target="30">0</h2>
 
-        <div class="row">
+                        <p>Years Experience</p>
 
-            <div class="col-md-3">
-
-                <div class="stat-card">
-
-                    <h2 class="counter" data-target="30">0</h2>
-
-                    <p>Years Experience</p>
+                    </div>
 
                 </div>
 
-            </div>
+                <div class="col-md-3">
 
-            <div class="col-md-3">
+                    <div class="stat-card">
 
-                <div class="stat-card">
+                        <h2 class="counter" data-target="5000">0</h2>
+                        <p>Clients</p>
 
-                    <h2 class="counter" data-target="5000">0</h2>
-                    <p>Clients</p>
-
-                </div>
-
-            </div>
-
-            <div class="col-md-3">
-
-                <div class="stat-card">
-
-                    <h2 class="counter" data-target="25000">0</h2>
-
-                    <p>Projects</p>
+                    </div>
 
                 </div>
 
-            </div>
+                <div class="col-md-3">
 
-            <div class="col-md-3">
+                    <div class="stat-card">
 
-                <div class="stat-card">
+                        <h2 class="counter" data-target="25000">0</h2>
 
-                   <h2 class="counter-percent" data-target="98">0</h2>
-                    <p>Satisfaction</p>
+                        <p>Projects</p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <div class="stat-card">
+
+                        <h2 class="counter-percent" data-target="98">0</h2>
+                        <p>Satisfaction</p>
+
+                    </div>
 
                 </div>
 
@@ -447,397 +438,383 @@ Gujarat Printlink
 
         </div>
 
-    </div>
+    </section>
 
-</section>
+    <!-- PRODUCTS -->
 
-<!-- PRODUCTS -->
+    <section id="products">
 
-<section id="products">
+        <div class="container">
 
-    <div class="container">
+            <div class="section-header">
 
-        <div class="section-header">
+                <h2>
 
-            <h2>
-
-                Products & Services
-
-            </h2>
-
-            <p>
-
-                Explore our complete range
-                of printing solutions.
-
-            </p>
-
-        </div>
-
-        <div id="categoryFilters">
-
-        </div>
-
-        <div class="row"
-             id="productsContainer">
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- PRODUCT MODAL -->
-
-<div class="modal fade"
-     id="productModal">
-
-    <div class="modal-dialog modal-lg">
-
-        <div class="modal-content">
-
-            <div class="modal-header">
-
-                <h4 id="modalTitle"></h4>
-
-                <button
-                    class="btn-close"
-                    data-bs-dismiss="modal">
-
-                </button>
-
-            </div>
-
-            <div class="modal-body"
-                 id="modalContent">
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-<!-- ================= ABOUT ================= -->
-
-<section id="about">
-
-    <div class="container">
-
-        <div class="row align-items-center gy-5">
-
-            <!-- Left Image -->
-
-            <div class="col-lg-5">
-
-                <div class="about-image">
-
-                    <img
-                    src="assets/images/hero/introduction.jpg"
-                    class="img-fluid rounded-4 shadow-lg"
-                    alt="About Gujarat Printlink">
-
-                </div>
-
-            </div>
-
-            <!-- Right Content -->
-
-            <div class="col-lg-7">
-
-                <span class="about-tag">
-
-                    ABOUT GUJARAT PRINTLINK
-
-                </span>
-
-                <h2 class="about-title">
-
-                    30+ Years of Printing Excellence
+                    Products & Services
 
                 </h2>
 
-                <p class="about-text">
+                <p>
 
-                    For more than three decades, Gujarat Printlink has been a trusted
-                    partner for premium printing, packaging and branding solutions.
-                    We proudly serve businesses, NGOs, educational institutions,
-                    charitable trusts and growing brands with quality-driven printing
-                    backed by experience, consistency and innovation.
+                    Explore our complete range
+                    of printing solutions.
 
                 </p>
 
-                <p class="about-text">
+            </div>
 
-                    Under the leadership of <strong>Paresh Patel</strong>,
-                    Gujarat Printlink has built long-term relationships by delivering
-                    exceptional quality, reliable service and creative solutions that
-                    help businesses strengthen their identity and leave a lasting
-                    impression.
+            <div id="categoryFilters">
 
-                </p>
+            </div>
 
-                <!-- FEATURES -->
+            <div class="row" id="productsContainer">
 
-                <div class="row mt-4">
+            </div>
 
-                    <div class="col-md-6">
+        </div>
 
-                        <ul class="about-list">
+    </section>
 
-                            <li>30+ Years Industry Experience</li>
+    <!-- PRODUCT MODAL -->
 
-                            <li>Premium Offset & Digital Printing</li>
+    <div class="modal fade" id="productModal">
 
-                            <li>Creative Design Team</li>
+        <div class="modal-dialog modal-lg">
 
-                            <li>Luxury Finishing Solutions</li>
+            <div class="modal-content">
 
-                        </ul>
+                <div class="modal-header">
 
-                    </div>
+                    <h4 id="modalTitle"></h4>
 
-                    <div class="col-md-6">
+                    <button class="btn-close" data-bs-dismiss="modal">
 
-                        <ul class="about-list">
+                    </button>
 
-                            <li>Packaging Solutions</li>
+                </div>
 
-                            <li>Fast Turnaround Time</li>
+                <div class="modal-body" id="modalContent">
 
-                            <li>Dedicated Customer Support</li>
+                </div>
 
-                            <li>Long-Term Business Partnerships</li>
+            </div>
 
-                        </ul>
+        </div>
+
+    </div>
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about">
+
+        <div class="container">
+
+            <div class="row align-items-center gy-5">
+
+                <!-- Left Image -->
+
+                <div class="col-lg-5">
+
+                    <div class="about-image">
+
+                        <img src="assets/images/hero/introduction.jpg" class="img-fluid rounded-4 shadow-lg"
+                            alt="About Gujarat Printlink">
 
                     </div>
 
                 </div>
 
-                <!-- QUOTE -->
+                <!-- Right Content -->
 
-                <div class="about-quote mt-5">
+                <div class="col-lg-7">
 
-                    <h5>
+                    <span class="about-tag">
 
-                        "Success is not built by transactions; it is buil by relationships, trust, and delivering values consistently."
+                        ABOUT GUJARAT PRINTLINK
 
-                    </h5>
+                    </span>
 
-                    <p>
+                    <h2 class="about-title">
 
-                        — Paresh Patel,
-                        Founder & Managing Director
+                        30+ Years of Printing Excellence
+
+                    </h2>
+
+                    <p class="about-text">
+
+                        For more than three decades, Gujarat Printlink has been a trusted
+                        partner for premium printing, packaging and branding solutions.
+                        We proudly serve businesses, NGOs, educational institutions,
+                        charitable trusts and growing brands with quality-driven printing
+                        backed by experience, consistency and innovation.
+
+                    </p>
+
+                    <p class="about-text">
+
+                        Under the leadership of <strong>Paresh Patel</strong>,
+                        Gujarat Printlink has built long-term relationships by delivering
+                        exceptional quality, reliable service and creative solutions that
+                        help businesses strengthen their identity and leave a lasting
+                        impression.
+
+                    </p>
+
+                    <!-- FEATURES -->
+
+                    <div class="row mt-4">
+
+                        <div class="col-md-6">
+
+                            <ul class="about-list">
+
+                                <li>30+ Years Industry Experience</li>
+
+                                <li>Premium Offset & Digital Printing</li>
+
+                                <li>Creative Design Team</li>
+
+                                <li>Luxury Finishing Solutions</li>
+
+                            </ul>
+
+                        </div>
+
+                        <div class="col-md-6">
+
+                            <ul class="about-list">
+
+                                <li>Packaging Solutions</li>
+
+                                <li>Fast Turnaround Time</li>
+
+                                <li>Dedicated Customer Support</li>
+
+                                <li>Long-Term Business Partnerships</li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                    <!-- QUOTE -->
+
+                    <div class="about-quote mt-5">
+
+                        <h5>
+
+                            "Success is not built by transactions; it is buil by relationships, trust, and delivering
+                            values consistently."
+
+                        </h5>
+
+                        <p>
+
+                            — Paresh Patel,
+                            Founder & Managing Director
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- CONTACT -->
+
+    <section id="contact">
+
+        <div class="container text-center">
+
+            <h2>
+
+                Let's Build Something Great
+
+            </h2>
+
+            <a href="https://wa.me/918849426648" class="btn btn-gold">
+
+                <i class="bi bi-whatsapp"></i> WhatsApp Now
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="row">
+
+                <!-- COMPANY -->
+
+                <div class="col-lg-4 mb-4">
+
+                    <div class="footer-brand">
+
+                        <img src="assets/images/logo/favicon.png" alt="Gujarat Printlink" class="footer-logo">
+
+                        <h4>
+
+                            Gujarat Printlink
+
+                        </h4>
+
+                    </div>
+
+                    <p class="footer-text">
+
+                        Premium Printing,
+                        Packaging & Branding Solutions
+                        trusted by businesses for over
+                        30 years.
 
                     </p>
 
                 </div>
 
-            </div>
+                <!-- QUICK LINKS -->
 
-        </div>
+                <div class="col-lg-3 mb-4">
 
-    </div>
+                    <h5 class="footer-title">
 
-</section>
-<!-- CONTACT -->
+                        Quick Links
 
-<section id="contact">
+                    </h5>
 
-    <div class="container text-center">
+                    <ul class="footer-links">
 
-        <h2>
+                        <li>
+                            <a href="#about">
+                                About Us
+                            </a>
+                        </li>
 
-            Let's Build Something Great
+                        <li>
+                            <a href="#products">
+                                Products
+                            </a>
+                        </li>
 
-        </h2>
+                        <li>
+                            <a href="#contact">
+                                Contact
+                            </a>
+                        </li>
 
-        <a href="https://wa.me/918849426648"
-           class="btn btn-gold">
-
-            WhatsApp Now
-
-        </a>
-
-    </div>
-
-</section>
-
-<!-- ================= FOOTER ================= -->
-
-<footer class="footer">
-
-    <div class="container">
-
-        <div class="row">
-
-            <!-- COMPANY -->
-
-            <div class="col-lg-4 mb-4">
-
-                <div class="footer-brand">
-
-                    <img
-                    src="assets/images/logo/favicon.png"
-                    alt="Gujarat Printlink"
-                    class="footer-logo">
-
-                    <h4>
-
-                        Gujarat Printlink
-
-                    </h4>
+                    </ul>
 
                 </div>
 
-                <p class="footer-text">
+                <!-- CONTACT -->
 
-                    Premium Printing,
-                    Packaging & Branding Solutions
-                    trusted by businesses for over
-                    30 years.
+                <div class="col-lg-5 mb-4">
+
+                    <h5 class="footer-title">
+
+                        Contact Information
+
+                    </h5>
+
+                    <ul class="footer-contact">
+
+                        <li>
+
+                            <i class="bi bi-phone"></i>
+
+                            <a href="https://wa.me/918849426648" target="_blank">
+
+                                +91 88494 26648
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <i class="bi bi-instagram"></i>
+
+                            <a href="https://instagram.com/gujaratprintlink" target="_blank">
+
+                                @gujaratprintlink
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <i class="bi bi-envelope"></i>
+
+                            <a href="mailto:sales@gujaratprintlink.com">
+
+                                sales@gujaratprintlink.com
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <i class="bi bi-geo-alt"></i>
+
+                            <a href="https://maps.app.goo.gl/7791iNufHcdJbMWJA" target="_blank">
+
+                                C/O. Gujarat Printlink<br>
+
+                                4/2, Deshwali Society,<br>
+
+                                Nr. Umiya Hall,<br>
+
+                                Opp. Bapasitaram Temple,<br>
+
+                                Chandlodia, Ahmedabad,<br>
+
+                                Gujarat, India - 382481
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="footer-bottom">
+
+                <p>
+
+                    © 2026 Gujarat Printlink.
+                    All Rights Reserved.
 
                 </p>
 
             </div>
 
-            <!-- QUICK LINKS -->
-
-            <div class="col-lg-3 mb-4">
-
-                <h5 class="footer-title">
-
-                    Quick Links
-
-                </h5>
-
-                <ul class="footer-links">
-
-                    <li>
-                        <a href="#about">
-                            About Us
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#products">
-                            Products
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#contact">
-                            Contact
-                        </a>
-                    </li>
-
-                </ul>
-
-            </div>
-
-            <!-- CONTACT -->
-
-            <div class="col-lg-5 mb-4">
-
-                <h5 class="footer-title">
-
-                    Contact Information
-
-                </h5>
-
-                <ul class="footer-contact">
-
-                    <li>
-
-                        📱
-
-                        <a href="https://wa.me/918849426648"
-                           target="_blank">
-
-                            +91 88494 26648
-
-                        </a>
-
-                    </li>
-
-                    <li>
-
-                        📸
-
-                        <a href="https://instagram.com/gujaratprintlink"
-                           target="_blank">
-
-                            @gujaratprintlink
-
-                        </a>
-
-                    </li>
-
-                    <li>
-
-                        ✉️
-
-                        <a href="mailto:sales@gujaratprintlink.com">
-
-                            sales@gujaratprintlink.com
-
-                        </a>
-
-                    </li>
-
-                    <li>
-
-                        📍
-
-                        <a href="https://maps.app.goo.gl/7791iNufHcdJbMWJA"
-                           target="_blank">
-
-                            C/O. Gujarat Printlink<br>
-
-                            4/2, Deshwali Society,<br>
-
-                            Nr. Umiya Hall,<br>
-
-                            Opp. Bapasitaram Temple,<br>
-
-                            Chandlodia, Ahmedabad,<br>
-
-                            Gujarat, India - 382481
-
-                        </a>
-
-                    </li>
-
-                </ul>
-
-            </div>
-
         </div>
 
-        <hr class="footer-divider">
+    </footer>
 
-        <div class="footer-bottom">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
-            <p>
+    <script src="assets/js/products.js"></script>
 
-                © 2026 Gujarat Printlink.
-                All Rights Reserved.
-
-            </p>
-
-        </div>
-
-    </div>
-
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-
-<script src="assets/js/products.js"></script>
-
-<script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
 
 </body>
+
 </html>

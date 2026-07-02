@@ -85,62 +85,52 @@ function generateCategories() {
    PRODUCT CARD
 ===================================== */
 
-function createProductCard(product){
+function createProductCard(product) {
 
     return `
 
-    <div
-        class="col-lg-4 col-md-6 mb-4"
-        id="product-${product.id}">
+    <div class="col-lg-4 col-md-6 mb-4" id="product-${product.id}">
 
-        <div class="product-card">
+        <div
+            class="product-card"
+            onclick="openProductModal(${product.id})"
+            style="cursor:pointer;">
 
             <img
-            src="${product.image}"
-            alt="${product.name}"
-            class="product-image"
-
-            onerror="
-            this.src='https://placehold.co/600x400/f8fafc/0072ff?text=Gujarat+Printlink'
-            ">
+                src="${product.image}"
+                alt="${product.name}"
+                class="product-image"
+                onerror="
+                this.src='https://placehold.co/600x400/f8fafc/0072ff?text=Gujarat+Printlink'
+                ">
 
             <div class="product-content">
 
                 <span class="product-category">
-
                     ${product.category}
-
                 </span>
 
-                <h4>
+                <h4>${product.name}</h4>
 
-                    ${product.name}
-
-                </h4>
-
-                <p>
-
-                    ${product.description}
-
-                </p>
+                <p>${product.description}</p>
 
                 <div class="product-buttons">
 
                     <button
-                    class="btn btn-dark"
+                        class="btn btn-dark"
+                        onclick="event.stopPropagation(); openProductModal(${product.id});">
 
-                    onclick="openProductModal(${product.id})">
-
-                    View Details
+                        View Details
 
                     </button>
 
                     <a
-                    href="${generateWhatsAppLink(product.name)}"
-                    target="_blank"
-                    class="btn btn-gold">
+                        href="${generateWhatsAppLink(product.name)}"
+                        target="_blank"
+                        class="btn btn-gold"
+                        onclick="event.stopPropagation();">
 
-                    Inquiry
+                        Inquiry
 
                     </a>
 
@@ -279,47 +269,47 @@ function renderProducts() {
 ===================================== */
 
 const suggestionBox =
-document.getElementById("searchSuggestions");
+    document.getElementById("searchSuggestions");
 
-searchInput.addEventListener("keyup", function(){
+searchInput.addEventListener("keyup", function () {
 
     const keyword =
-    this.value.toLowerCase().trim();
+        this.value.toLowerCase().trim();
 
-    if(keyword===""){
+    if (keyword === "") {
 
-        suggestionBox.style.display="none";
+        suggestionBox.style.display = "none";
         return;
 
     }
 
     const results =
 
-    products.filter(product=>
+        products.filter(product =>
 
-        product.name.toLowerCase().includes(keyword)
+            product.name.toLowerCase().includes(keyword)
 
-        ||
+            ||
 
-        product.category.toLowerCase().includes(keyword)
+            product.category.toLowerCase().includes(keyword)
 
-    );
+        );
 
-    suggestionBox.innerHTML="";
+    suggestionBox.innerHTML = "";
 
-    if(results.length===0){
+    if (results.length === 0) {
 
-        suggestionBox.style.display="none";
+        suggestionBox.style.display = "none";
 
         return;
 
     }
 
-    results.forEach(product=>{
+    results.forEach(product => {
 
         suggestionBox.innerHTML +=
 
-        `
+            `
         <div class="search-item"
              onclick="goToProduct(${product.id})">
 
@@ -344,53 +334,53 @@ searchInput.addEventListener("keyup", function(){
 
     });
 
-    suggestionBox.style.display="block";
+    suggestionBox.style.display = "block";
 
 });
 
-function goToProduct(id){
+function goToProduct(id) {
 
-    suggestionBox.style.display="none";
+    suggestionBox.style.display = "none";
 
-    searchInput.value="";
+    searchInput.value = "";
 
-    currentCategory="All";
+    currentCategory = "All";
 
     renderProducts();
 
-    setTimeout(()=>{
+    setTimeout(() => {
 
         const card =
 
-        document.getElementById(
+            document.getElementById(
 
-            "product-"+id
+                "product-" + id
 
-        );
+            );
 
-        if(card){
+        if (card) {
 
             card.scrollIntoView({
 
-                behavior:"smooth",
+                behavior: "smooth",
 
-                block:"center"
+                block: "center"
 
             });
 
-            card.style.transition=".4s";
+            card.style.transition = ".4s";
 
-            card.style.boxShadow="0 0 0 4px #D4AF37";
+            card.style.boxShadow = "0 0 0 4px #D4AF37";
 
-            setTimeout(()=>{
+            setTimeout(() => {
 
-                card.style.boxShadow="";
+                card.style.boxShadow = "";
 
-            },2000);
+            }, 2000);
 
         }
 
-    },100);
+    }, 100);
 
 }
 
@@ -558,51 +548,51 @@ console.log(
       PREMIUM COUNTER
 ====================================*/
 
-function animateValue(element,target,suffix){
+function animateValue(element, target, suffix) {
 
     const duration = 2200;
 
     const start = performance.now();
 
-    function easeOutExpo(x){
+    function easeOutExpo(x) {
 
-        return x===1
+        return x === 1
 
-        ?1
+            ? 1
 
-        :1-Math.pow(2,-10*x);
+            : 1 - Math.pow(2, -10 * x);
 
     }
 
-    function update(now){
+    function update(now) {
 
         const progress =
 
-        Math.min(
+            Math.min(
 
-            (now-start)/duration,
+                (now - start) / duration,
 
-            1
+                1
 
-        );
+            );
 
         const eased =
 
-        easeOutExpo(progress);
+            easeOutExpo(progress);
 
         const value =
 
-        Math.floor(
+            Math.floor(
 
-            eased*target
+                eased * target
 
-        );
+            );
 
         element.textContent =
 
-        value + suffix;
+            value + suffix;
 
-        if(progress<1){
+        if (progress < 1) {
 
             requestAnimationFrame(update);
 
@@ -619,77 +609,77 @@ function animateValue(element,target,suffix){
 ====================================*/
 
 const statCards =
-document.querySelectorAll(".stat-card");
+    document.querySelectorAll(".stat-card");
 
-let played=false;
+let played = false;
 
 const statsObserver =
 
-new IntersectionObserver(entries=>{
+    new IntersectionObserver(entries => {
 
-    entries.forEach(entry=>{
+        entries.forEach(entry => {
 
-        if(entry.isIntersecting && !played){
+            if (entry.isIntersecting && !played) {
 
-            played=true;
+                played = true;
 
-            statCards.forEach((card,index)=>{
+                statCards.forEach((card, index) => {
 
-                setTimeout(()=>{
+                    setTimeout(() => {
 
-                    card.classList.add("show");
+                        card.classList.add("show");
 
-                },index*180);
+                    }, index * 180);
 
-            });
+                });
 
-            document
+                document
 
-            .querySelectorAll(".counter")
+                    .querySelectorAll(".counter")
 
-            .forEach(counter=>{
+                    .forEach(counter => {
 
-                animateValue(
+                        animateValue(
 
-                    counter,
+                            counter,
 
-                    Number(counter.dataset.target),
+                            Number(counter.dataset.target),
 
-                    "+"
+                            "+"
 
-                );
+                        );
 
-            });
+                    });
 
-            document
+                document
 
-            .querySelectorAll(".counter-percent")
+                    .querySelectorAll(".counter-percent")
 
-            .forEach(counter=>{
+                    .forEach(counter => {
 
-                animateValue(
+                        animateValue(
 
-                    counter,
+                            counter,
 
-                    Number(counter.dataset.target),
+                            Number(counter.dataset.target),
 
-                    "%"
+                            "%"
 
-                );
+                        );
 
-            });
+                    });
 
-        }
+            }
 
+        });
+
+    }, {
+        threshold: .35
     });
-
-},{
-    threshold:.35
-});
 
 statsObserver.observe(
 
-document.querySelector("#stats")
+    document.querySelector("#stats")
 
 );
 
@@ -698,19 +688,19 @@ document.querySelector("#stats")
 ==================================*/
 
 const heroImage =
-document.querySelector(".hero-image");
+    document.querySelector(".hero-image");
 
-document.addEventListener("mousemove",e=>{
+document.addEventListener("mousemove", e => {
 
     const x =
-    (window.innerWidth/2-e.clientX)/40;
+        (window.innerWidth / 2 - e.clientX) / 40;
 
     const y =
-    (window.innerHeight/2-e.clientY)/40;
+        (window.innerHeight / 2 - e.clientY) / 40;
 
-    heroImage.style.transform=
+    heroImage.style.transform =
 
-    `translate(${x}px,${y}px)`;
+        `translate(${x}px,${y}px)`;
 
 });
 
@@ -733,13 +723,13 @@ window.addEventListener("scroll", () => {
 
     /* Navbar Background */
 
-    if(currentScroll > 80){
+    if (currentScroll > 80) {
 
         navbar.classList.add("scrolled");
 
     }
 
-    else{
+    else {
 
         navbar.classList.remove("scrolled");
 
@@ -747,13 +737,13 @@ window.addEventListener("scroll", () => {
 
     /* Hide While Scrolling Down */
 
-    if(currentScroll > lastScroll && currentScroll > 150){
+    if (currentScroll > lastScroll && currentScroll > 150) {
 
         navbar.classList.add("nav-hidden");
 
     }
 
-    else{
+    else {
 
         navbar.classList.remove("nav-hidden");
 
@@ -771,21 +761,21 @@ window.addEventListener("scroll", () => {
 
     const scrollTop =
 
-    document.documentElement.scrollTop;
+        document.documentElement.scrollTop;
 
     const height =
 
-    document.documentElement.scrollHeight -
+        document.documentElement.scrollHeight -
 
-    document.documentElement.clientHeight;
+        document.documentElement.clientHeight;
 
     const progress =
 
-    (scrollTop / height) * 100;
+        (scrollTop / height) * 100;
 
     progressBar.style.width =
 
-    progress + "%";
+        progress + "%";
 
 });
 
@@ -795,27 +785,27 @@ window.addEventListener("scroll", () => {
 
 const sections =
 
-document.querySelectorAll("section");
+    document.querySelectorAll("section");
 
 const navLinks =
 
-document.querySelectorAll(".navbar-nav a");
+    document.querySelectorAll(".navbar-nav a");
 
-window.addEventListener("scroll",()=>{
+window.addEventListener("scroll", () => {
 
     let current = "";
 
-    sections.forEach(section=>{
+    sections.forEach(section => {
 
         const top =
 
-        section.offsetTop - 120;
+            section.offsetTop - 120;
 
         const height =
 
-        section.offsetHeight;
+            section.offsetHeight;
 
-        if(window.pageYOffset >= top){
+        if (window.pageYOffset >= top) {
 
             current = section.getAttribute("id");
 
@@ -823,17 +813,17 @@ window.addEventListener("scroll",()=>{
 
     });
 
-    navLinks.forEach(link=>{
+    navLinks.forEach(link => {
 
         link.classList.remove("active");
 
-        if(
+        if (
 
             link.getAttribute("href")
 
             == "#" + current
 
-        ){
+        ) {
 
             link.classList.add("active");
 
@@ -849,39 +839,39 @@ window.addEventListener("scroll",()=>{
 
 document
 
-.querySelectorAll('a[href^="#"]')
+    .querySelectorAll('a[href^="#"]')
 
-.forEach(anchor=>{
+    .forEach(anchor => {
 
-    anchor.addEventListener("click",
+        anchor.addEventListener("click",
 
-    function(e){
+            function (e) {
 
-        e.preventDefault();
+                e.preventDefault();
 
-        const target =
+                const target =
 
-        document.querySelector(
+                    document.querySelector(
 
-        this.getAttribute("href")
+                        this.getAttribute("href")
 
-        );
+                    );
 
-        if(target){
+                if (target) {
 
-            target.scrollIntoView({
+                    target.scrollIntoView({
 
-                behavior:"smooth",
+                        behavior: "smooth",
 
-                block:"start"
+                        block: "start"
+
+                    });
+
+                }
 
             });
 
-        }
-
     });
-
-});
 
 /*----------------------------------------
     CLOSE MOBILE MENU
@@ -889,125 +879,310 @@ document
 
 document
 
-.querySelectorAll(".offcanvas a")
+    .querySelectorAll(".offcanvas a")
 
-.forEach(link=>{
+    .forEach(link => {
 
-    link.addEventListener("click",()=>{
+        link.addEventListener("click", () => {
 
-        const menu =
+            const menu =
 
-        bootstrap.Offcanvas.getInstance(
+                bootstrap.Offcanvas.getInstance(
 
-        document.getElementById("mobileMenu")
+                    document.getElementById("mobileMenu")
 
-        );
+                );
 
-        if(menu){
+            if (menu) {
 
-            menu.hide();
+                menu.hide();
 
-        }
+            }
+
+        });
 
     });
-
-});
 
 /*----------------------------------------
     LOGO SCALE
 ----------------------------------------*/
 
-window.addEventListener("scroll",()=>{
+window.addEventListener("scroll", () => {
 
     const logo =
 
-    document.querySelector(".logo-icon");
+        document.querySelector(".logo-icon");
 
-    if(window.scrollY>80){
+    if (window.scrollY > 80) {
 
-        logo.style.transform="scale(.88)";
+        logo.style.transform = "scale(.88)";
 
     }
 
-    else{
+    else {
 
-        logo.style.transform="scale(1)";
+        logo.style.transform = "scale(1)";
 
     }
 
 });
 
-/*----------------------------------------
-    MEGA MENU DELAY
-----------------------------------------*/
-
 const megaParent =
-
-document.querySelector(".mega-parent");
+    document.querySelector(".mega-parent");
 
 const megaMenu =
+    document.querySelector(".mega-menu");
 
-document.querySelector(".mega-menu");
+const megaContainer =
+    document.getElementById("megaMenuContainer");
 
-if(megaParent){
+if (megaParent) {
 
     let timer;
 
-    megaParent.addEventListener(
-
-    "mouseenter",()=>{
+    megaParent.addEventListener("mouseenter", () => {
 
         clearTimeout(timer);
 
-        megaMenu.style.display="block";
+        megaMenu.style.display = "block";
 
     });
 
-    megaParent.addEventListener(
+    megaParent.addEventListener("mouseleave", () => {
 
-    "mouseleave",()=>{
+        timer = setTimeout(() => {
 
-        timer =
+            megaMenu.style.display = "";
 
-        setTimeout(()=>{
-
-            megaMenu.style.display="";
-
-        },200);
+        }, 200);
 
     });
 
 }
 
+/* =====================================================
+   BUILD MEGA MENU
+===================================================== */
+
+function buildMegaMenu() {
+
+    if (!megaContainer) return;
+
+    megaContainer.innerHTML = "";
+
+    // Group products by category
+
+    const groupedProducts = {};
+
+    products.forEach(product => {
+
+        if (!groupedProducts[product.category]) {
+
+            groupedProducts[product.category] = {
+
+                title: product.categoryName,
+
+                products: []
+
+            };
+
+        }
+
+        groupedProducts[product.category].products.push(product);
+
+    });
+
+    // Build HTML
+
+    Object.keys(groupedProducts).forEach(category => {
+
+        const group = groupedProducts[category];
+
+        const column = document.createElement("div");
+
+        column.innerHTML = `
+
+            <h6
+                class="mega-category"
+                data-category="${category}">
+
+                ${group.title}
+
+            </h6>
+
+            ${group.products.map(product => `
+
+                <a
+                    href="#"
+                    class="mega-product"
+                    data-category="${category}"
+                    data-slug="${product.slug}">
+
+                    ${product.name}
+
+                </a>
+
+            `).join("")}
+
+        `;
+
+        megaContainer.appendChild(column);
+
+    });
+
+    attachMegaMenuEvents();
+
+}
+
+/* =====================================================
+   EVENTS
+===================================================== */
+
+function attachMegaMenuEvents() {
+
+    /* CATEGORY CLICK */
+
+    document
+        .querySelectorAll(".mega-category")
+        .forEach(category => {
+
+            category.addEventListener("click", () => {
+
+                currentCategory =
+                    category.dataset.category;
+
+                renderProducts();
+
+                document
+                    .getElementById("products")
+                    .scrollIntoView({
+
+                        behavior: "smooth"
+
+                    });
+
+                megaMenu.style.display = "";
+
+            });
+
+        });
+
+    /* PRODUCT CLICK */
+
+    document
+        .querySelectorAll(".mega-product")
+        .forEach(link => {
+
+            link.addEventListener("click", function (e) {
+
+                e.preventDefault();
+
+                currentCategory =
+                    this.dataset.category;
+
+                renderProducts();
+
+                document
+                    .getElementById("products")
+                    .scrollIntoView({
+
+                        behavior: "smooth"
+
+                    });
+
+                megaMenu.style.display = "";
+
+                setTimeout(() => {
+
+                    const product = products.find(
+
+                        p => p.slug === this.dataset.slug
+
+                    );
+
+                    if (!product) return;
+
+                    const card =
+                        document.getElementById(
+
+                            `product-${product.id}`
+
+                        );
+
+                    if (!card) return;
+
+                    card.scrollIntoView({
+
+                        behavior: "smooth",
+
+                        block: "center"
+
+                    });
+
+                    card.classList.add(
+
+                        "product-highlight"
+
+                    );
+
+                    setTimeout(() => {
+
+                        card.classList.remove(
+
+                            "product-highlight"
+
+                        );
+
+                    }, 1500);
+
+                }, 300);
+
+            });
+
+        });
+
+}
+
+/* =====================================================
+   INIT
+===================================================== */
+
+document.addEventListener(
+
+    "DOMContentLoaded",
+
+    buildMegaMenu
+
+);
 /*----------------------------------------
     HERO PARALLAX
 ----------------------------------------*/
 
 const hero =
 
-document.querySelector(".hero-image");
+    document.querySelector(".hero-image");
 
 document.addEventListener(
 
-"mousemove",
+    "mousemove",
 
-e=>{
+    e => {
 
-    if(!hero) return;
+        if (!hero) return;
 
-    const x =
+        const x =
 
-    (window.innerWidth/2-e.clientX)/50;
+            (window.innerWidth / 2 - e.clientX) / 50;
 
-    const y =
+        const y =
 
-    (window.innerHeight/2-e.clientY)/50;
+            (window.innerHeight / 2 - e.clientY) / 50;
 
-    hero.style.transform =
+        hero.style.transform =
 
-    `translate(${x}px,${y}px)`;
+            `translate(${x}px,${y}px)`;
 
-});
+    });
 
 /*----------------------------------------
     NAVBAR SHADOW ON HOVER
@@ -1015,25 +1190,25 @@ e=>{
 
 navbar.addEventListener(
 
-"mouseenter",()=>{
+    "mouseenter", () => {
 
-    navbar.style.boxShadow=
+        navbar.style.boxShadow =
 
-    "0 18px 45px rgba(0,0,0,.08)";
+            "0 18px 45px rgba(0,0,0,.08)";
 
-});
+    });
 
 navbar.addEventListener(
 
-"mouseleave",()=>{
+    "mouseleave", () => {
 
-    if(window.scrollY<80){
+        if (window.scrollY < 80) {
 
-        navbar.style.boxShadow="";
+            navbar.style.boxShadow = "";
 
-    }
+        }
 
-});
+    });
 
 /*----------------------------------------
     CONSOLE
@@ -1041,6 +1216,52 @@ navbar.addEventListener(
 
 console.log(
 
-"Premium Navigation Loaded"
+    "Premium Navigation Loaded"
 
 );
+
+/*=========================================
+ HERO BACKGROUND SLIDER
+=========================================*/
+
+const heroSlides =
+
+    document.querySelectorAll(".hero-slide");
+
+let currentHero = 0;
+
+function changeHeroBackground() {
+
+    heroSlides[currentHero]
+
+        .classList.remove("active");
+
+    currentHero++;
+
+    if (currentHero >= heroSlides.length) {
+
+        currentHero = 0;
+
+    }
+
+    heroSlides[currentHero]
+
+        .classList.add("active");
+
+}
+
+if (heroSlides.length) {
+
+    heroSlides[0]
+
+        .classList.add("active");
+
+    setInterval(
+
+        changeHeroBackground,
+
+        7000
+
+    );
+
+}
