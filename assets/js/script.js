@@ -80,7 +80,223 @@ function generateCategories() {
     });
 
 }
+/* ===========================================================
+   PREMIUM CLIENT LOGO MARQUEE
+   Gujarat Printlink
+=========================================================== */
 
+document.addEventListener("DOMContentLoaded", () => {
+
+    const section = document.querySelector(".clients-section");
+
+    if (!section) return;
+
+    const slider = section.querySelector(".clients-slider");
+    const wrapper = section.querySelector(".clients-mask");
+    const track = section.querySelector(".clients-track");
+
+    const prev = section.querySelector(".client-prev");
+    const next = section.querySelector(".client-next");
+
+    // -------------------------------------------------
+
+    const originalItems = [...track.children];
+
+    // Duplicate logos for seamless scrolling
+
+    originalItems.forEach(item => {
+
+        track.appendChild(item.cloneNode(true));
+
+    });
+
+    // -------------------------------------------------
+
+    let position = 0;
+
+    let speed = 0.6;
+
+    let direction = -1;
+
+    let pause = false;
+
+    let dragging = false;
+
+    let startX = 0;
+
+    let previousX = 0;
+
+    // -------------------------------------------------
+
+    function getResetPoint() {
+
+        return track.scrollWidth / 2;
+
+    }
+
+    // -------------------------------------------------
+
+    function animate() {
+
+        if (!pause && !dragging) {
+
+            position += speed * direction;
+
+            const reset = getResetPoint();
+
+            if (direction === -1 && Math.abs(position) >= reset) {
+
+                position = 0;
+
+            }
+
+            if (direction === 1 && position >= 0) {
+
+                position = -reset;
+
+            }
+
+            track.style.transform =
+                `translate3d(${position}px,0,0)`;
+
+        }
+
+        requestAnimationFrame(animate);
+
+    }
+
+    animate();
+
+    // -------------------------------------------------
+    // Hover Pause
+    // -------------------------------------------------
+
+    slider.addEventListener("mouseenter", () => {
+
+        pause = true;
+
+    });
+
+    slider.addEventListener("mouseleave", () => {
+
+        pause = false;
+
+    });
+
+    // -------------------------------------------------
+    // Buttons
+    // -------------------------------------------------
+
+    prev.addEventListener("click", () => {
+
+        direction = 1;
+
+    });
+
+    next.addEventListener("click", () => {
+
+        direction = -1;
+
+    });
+
+    // -------------------------------------------------
+    // Drag Desktop
+    // -------------------------------------------------
+
+    wrapper.addEventListener("mousedown", e => {
+
+        dragging = true;
+
+        pause = true;
+
+        startX = e.clientX;
+
+        previousX = startX;
+
+        wrapper.style.cursor = "grabbing";
+
+    });
+
+    window.addEventListener("mouseup", () => {
+
+        dragging = false;
+
+        pause = false;
+
+        wrapper.style.cursor = "grab";
+
+    });
+
+    window.addEventListener("mousemove", e => {
+
+        if (!dragging) return;
+
+        const dx = e.clientX - previousX;
+
+        previousX = e.clientX;
+
+        position += dx;
+
+        track.style.transform =
+            `translate3d(${position}px,0,0)`;
+
+    });
+
+    // -------------------------------------------------
+    // Touch
+    // -------------------------------------------------
+
+    wrapper.addEventListener("touchstart", e => {
+
+        dragging = true;
+
+        pause = true;
+
+        startX = e.touches[0].clientX;
+
+        previousX = startX;
+
+    });
+
+    wrapper.addEventListener("touchmove", e => {
+
+        if (!dragging) return;
+
+        const dx = e.touches[0].clientX - previousX;
+
+        previousX = e.touches[0].clientX;
+
+        position += dx;
+
+        track.style.transform =
+            `translate3d(${position}px,0,0)`;
+
+    });
+
+    wrapper.addEventListener("touchend", () => {
+
+        dragging = false;
+
+        pause = false;
+
+    });
+
+    // -------------------------------------------------
+    // Mouse Wheel
+    // -------------------------------------------------
+
+    wrapper.addEventListener("wheel", e => {
+
+        e.preventDefault();
+
+        position -= e.deltaY;
+
+        track.style.transform =
+            `translate3d(${position}px,0,0)`;
+
+    }, { passive:false });
+
+});
 /* =====================================
    PRODUCT CARD
 ===================================== */

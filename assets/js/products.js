@@ -13,7 +13,7 @@ const products = [
         /* ==========================================================
            CATEGORY
         ========================================================== */
-        category: "business-printing",
+        category: "Business Printing",
         categoryName: "Business Printing",
 
         /* ==========================================================
@@ -29,7 +29,7 @@ const products = [
         thumbnail:
             "assets/images/products/business-printing/business-card-thumb.webp",
         pdf:
-            "assets/pdf/business-printing/visiting-card-catalog.pdf",
+            "pdf/Visiting Card Catalog.pdf",
 
         /* ==========================================================
            PRODUCT DETAILS
@@ -99,7 +99,7 @@ const products = [
         id: 2,
         slug: "letterheads",
 
-        category: "business-printing",
+        category: "Business Printing",
         categoryName: "Business Printing",
 
         name: "Letterheads",
@@ -112,7 +112,7 @@ const products = [
         thumbnail:
             "assets/images/products/business-printing/letterhead-thumb.webp",
         pdf:
-            "assets/pdf/business-printing/letterheads.pdf",
+            "pdf/Business Printing Catalog.pdf",
 
         minimumQty:
             "1000",
@@ -163,7 +163,7 @@ const products = [
         id: 3,
         slug: "envelopes",
 
-        category: "business-printing",
+        category: "Business Printing",
         categoryName: "Business Printing",
 
         name: "Envelopes",
@@ -176,7 +176,7 @@ const products = [
         thumbnail:
             "assets/images/products/business-printing/envelope-thumb.webp",
         pdf:
-            "assets/pdf/business-printing/envelopes.pdf",
+            "pdf/Business Printing Catalog.pdf",
 
         minimumQty:
             "1000",
@@ -228,7 +228,7 @@ const products = [
         id: 4,
         slug: "id-cards",
 
-        category: "business-printing",
+        category: "Business Printing",
         categoryName: "Business Printing",
 
         name: "ID Cards",
@@ -241,7 +241,7 @@ const products = [
         thumbnail:
             "assets/images/products/business-printing/id-card-thumb.webp",
         pdf:
-            "assets/pdf/business-printing/id-cards.pdf",
+            "pdf/Business Printing Catalog.pdf",
 
         minimumQty:
             "50",
@@ -305,7 +305,7 @@ const products = [
            CATEGORY
         ========================================================== */
 
-        category: "business-printing",
+        category: "Business Printing",
 
         categoryName: "Business Printing",
 
@@ -328,7 +328,7 @@ const products = [
             "assets/images/products/business-printing/receipt-book-thumb.webp",
 
         pdf:
-            "assets/pdf/business-printing/receipt-books.pdf",
+            "pdf/Business Printing Catalog.pdf",
 
         /* ==========================================================
            PRODUCT DETAILS
@@ -427,7 +427,7 @@ const products = [
            CATEGORY
         ========================================================== */
 
-        category: "business-printing",
+        category: "Business Printing",
         categoryName: "Business Printing",
 
         /* ==========================================================
@@ -449,7 +449,7 @@ const products = [
             "assets/images/products/business-printing/bill-book-thumb.webp",
 
         pdf:
-            "assets/pdf/business-printing/bill-books.pdf",
+            "pdf/Business Printing Catalog.pdf",
 
         /* ==========================================================
            PRODUCT DETAILS
@@ -549,7 +549,7 @@ const products = [
            CATEGORY
         ========================================================== */
 
-        category: "business-printing",
+        category: "Business Printing",
         categoryName: "Business Printing",
 
         /* ==========================================================
@@ -571,7 +571,7 @@ const products = [
             "assets/images/products/business-printing/notepads-thumb.webp",
 
         pdf:
-            "assets/pdf/business-printing/notepads.pdf",
+            "pdf/Business Printing Catalog.pdf",
 
         /* ==========================================================
            PRODUCT DETAILS
@@ -667,7 +667,7 @@ const products = [
            CATEGORY
         ========================================================== */
 
-        category: "business-printing",
+        category: "Business Printing",
         categoryName: "Business Printing",
 
         /* ==========================================================
@@ -689,7 +689,7 @@ const products = [
             "assets/images/products/business-printing/file-folders-thumb.webp",
 
         pdf:
-            "assets/pdf/business-printing/folders.pdf",
+            "pdf/Business Printing Catalog.pdf",
 
         /* ==========================================================
            PRODUCT DETAILS
@@ -785,7 +785,7 @@ const products = [
            CATEGORY
         ========================================================== */
 
-        category: "business-printing",
+        category: "Business Printing",
         categoryName: "Business Printing",
 
         /* ==========================================================
@@ -807,7 +807,7 @@ const products = [
             "assets/images/products/business-printing/office-stationery-thumb.webp",
 
         pdf:
-            "assets/pdf/business-printing/custom-office-stationery.pdf",
+            "pdf/Business Printing Catalog.pdf",
 
         /* ==========================================================
            PRODUCT DETAILS
@@ -903,7 +903,7 @@ const products = [
            CATEGORY
         ========================================================== */
 
-        category: "marketing",
+        category: "Marketing",
         categoryName: "Marketing",
 
         /* ==========================================================
@@ -925,7 +925,7 @@ const products = [
             "assets/images/products/marketing/flyers-leaflets-thumb.webp",
 
         pdf:
-            "assets/pdf/marketing/flyers.pdf",
+            "pdf/Marketing Catalog.pdf",
 
         /* ==========================================================
            PRODUCT DETAILS
@@ -1015,7 +1015,7 @@ const products = [
         id: 11,
         slug: "brochures-catalogues",
 
-        category: "marketing",
+        category: "Marketing",
         categoryName: "Marketing",
 
         name: "Brochures & Catalogues",
@@ -1033,7 +1033,7 @@ const products = [
             "assets/images/products/marketing/brochures-catalog-thumb.webp",
 
         pdf:
-            "assets/pdf/marketing/brochures.pdf",
+            "pdf/Marketing Catalog.pdf",
 
         minimumQty:
             "100",
@@ -1104,7 +1104,7 @@ const products = [
         id: 12,
         slug: "company-profiles",
 
-        category: "marketing",
+        category: "Marketing",
         categoryName: "Marketing",
 
         name: "Company Profiles",
@@ -1122,7 +1122,7 @@ const products = [
             "assets/images/products/marketing/company-profiles-thumb.webp",
 
         pdf:
-            "assets/pdf/marketing/company-profile.pdf",
+            "pdf/Marketing Catalog.pdf",
 
         minimumQty:
             "100",
@@ -1188,7 +1188,7 @@ const products = [
         id: 13,
         slug: "booklets",
 
-        category: "marketing",
+        category: "Marketing",
         categoryName: "Marketing",
 
         name: "Booklets",
@@ -1206,7 +1206,7 @@ const products = [
             "assets/images/products/marketing/booklet-thumb.webp",
 
         pdf:
-            "assets/pdf/marketing/booklets.pdf",
+            "pdf/Marketing Catalog.pdf",
 
         minimumQty:
             "500",
@@ -1286,7 +1286,7 @@ const products = [
            CATEGORY
         ========================================================== */
 
-        category: "packaging",
+        category: "Packaging",
         categoryName: "Packaging",
 
         /* ==========================================================
@@ -1308,7 +1308,7 @@ const products = [
             "assets/images/products/packaging/product-box-thumb.webp",
 
         pdf:
-            "assets/pdf/packaging/product-boxes.pdf",
+            "pdf/Packaging Catalog.pdf",
 
         /* ==========================================================
            PRODUCT DETAILS
@@ -1396,7 +1396,7 @@ const products = [
 
         slug: "corrugated-boxes",
 
-        category: "packaging",
+        category: "Packaging",
 
         categoryName: "Packaging",
 
@@ -1415,7 +1415,7 @@ const products = [
             "assets/images/products/packaging/corrugated-box-thumb.webp",
 
         pdf:
-            "assets/pdf/packaging/corrugated-box.pdf",
+            "pdf/Packaging Catalog.pdf",
 
         minimumQty:
             "1000",
@@ -1483,7 +1483,7 @@ const products = [
 
         slug: "mono-cartons",
 
-        category: "packaging",
+        category: "Packaging",
 
         categoryName: "Packaging",
 
@@ -1502,7 +1502,7 @@ const products = [
             "assets/images/products/packaging/mono-carton-thumb.webp",
 
         pdf:
-            "assets/pdf/packaging/mono-carton.pdf",
+            "pdf/Packaging Catalog.pdf",
 
         minimumQty:
             "1000",
@@ -1570,7 +1570,7 @@ const products = [
 
         slug: "food-packaging",
 
-        category: "packaging",
+        category: "Packaging",
 
         categoryName: "Packaging",
 
@@ -1589,7 +1589,7 @@ const products = [
             "assets/images/products/packaging/food-packaging-thumb.webp",
 
         pdf:
-            "assets/pdf/packaging/food-packaging.pdf",
+            "pdf/Packaging Catalog.pdf",
 
         minimumQty:
             "1000",
@@ -1657,7 +1657,7 @@ const products = [
 
         slug: "personalized-branded-packaging",
 
-        category: "packaging",
+        category: "Packaging",
 
         categoryName: "Packaging",
 
@@ -1676,7 +1676,7 @@ const products = [
             "assets/images/products/packaging/personalized-branded-packaging-thumb.webp",
 
         pdf:
-            "assets/pdf/packaging/personalized-branded-packaging.pdf",
+            "pdf/Packaging Catalog.pdf",
 
         minimumQty:
             "1000",
@@ -1749,7 +1749,7 @@ const products = [
 
         slug: "product-labels",
 
-        category: "labels",
+        category: "Labels & Stickers",
 
         categoryName: "Labels & Stickers",
 
@@ -1768,7 +1768,7 @@ const products = [
             "assets/images/products/labels/product-labels-thumb.webp",
 
         pdf:
-            "assets/pdf/labels/product-labels.pdf",
+            "pdf/Labels & Stickers Catalog.pdf",
 
         minimumQty:
             "1000",
@@ -1841,7 +1841,7 @@ const products = [
 
         slug: "nt-opec-stickers",
 
-        category: "labels",
+        category: "Labels & Stickers",
 
         categoryName: "Labels & Stickers",
 
@@ -1860,7 +1860,7 @@ const products = [
             "assets/images/products/labels/nt-stickers-thumb.webp",
 
         pdf:
-            "assets/pdf/labels/nt-opec-stickers.pdf",
+            "pdf/Labels & Stickers Catalog.pdf",
 
         minimumQty:
             "1000",
@@ -1928,7 +1928,7 @@ const products = [
 
         slug: "mirror-coat-paper-stickers",
 
-        category: "labels",
+        category: "Labels & Stickers",
 
         categoryName: "Labels & Stickers",
 
@@ -1947,7 +1947,7 @@ const products = [
             "assets/images/products/labels/mirror-stickers-thumb.webp",
 
         pdf:
-            "assets/pdf/labels/mirror-coat-stickers.pdf",
+            "pdf/Labels & Stickers Catalog.pdf",
 
         minimumQty:
             "1000",
@@ -2002,7 +2002,7 @@ const products = [
     {
         id: 22,
         slug: "silver-stickers",
-        category: "labels",
+        category: "Labels & Stickers",
         categoryName: "Labels & Stickers",
         name: "Silver Stickers",
         shortDescription:
@@ -2014,7 +2014,7 @@ const products = [
         thumbnail:
             "assets/images/products/labels/silver-stickers-thumb.webp",
         pdf:
-            "assets/pdf/labels/silver-stickers.pdf",
+            "pdf/Labels & Stickers Catalog.pdf",
 
         minimumQty:
             "1000",
@@ -2058,7 +2058,7 @@ const products = [
     {
         id: 23,
         slug: "transparent-stickers",
-        category: "labels",
+        category: "Labels & Stickers",
         categoryName: "Labels & Stickers",
         name: "Transparent Stickers",
         shortDescription:
@@ -2070,7 +2070,7 @@ const products = [
         thumbnail:
             "assets/images/products/labels/transparent-stickers-thumb.webp",
         pdf:
-            "assets/pdf/labels/transparent-stickers.pdf",
+            "pdf/Labels & Stickers Catalog.pdf",
 
         minimumQty:
             "1000",
@@ -2132,7 +2132,7 @@ const products = [
         thumbnail:
             "assets/images/products/large-format-printing/pvc-vinyl-stickers-thumb.webp",
         pdf:
-            "assets/pdf/large-format-printing/pvc-vinyl-stickers.pdf",
+            "pdf/Large Format Printing Catalog.pdf",
 
         minimumQty:
             "1000",
@@ -2200,7 +2200,7 @@ const products = [
         thumbnail:
             "assets/images/products/large-format-printing/flex-banner-thumb.webp",
         pdf:
-            "assets/pdf/large-format-printing/flex-banners.pdf",
+            "pdf/Large Format Printing Catalog.pdf",
 
         minimumQty:
             "1",
@@ -2265,7 +2265,7 @@ const products = [
         thumbnail:
             "assets/images/products/large-format-printing/roll-up-standees-thumb.webp",
         pdf:
-            "assets/pdf/large-format-printing/roll-up-standees.pdf",
+            "pdf/Large Format Printing Catalog.pdf",
 
         minimumQty:
             "1",
@@ -2324,7 +2324,7 @@ const products = [
         thumbnail:
             "assets/images/products/large-format-printing/outdoor-hoardings-thumb.webp",
         pdf:
-            "assets/pdf/large-format-printing/outdoor-hoardings.pdf",
+            "pdf/Large Format Printing Catalog.pdf",
 
         minimumQty:
             "1",
@@ -2385,7 +2385,7 @@ const products = [
         thumbnail:
             "assets/images/products/large-format-printing/acrylic-sign-board-thumb.webp",
         pdf:
-            "assets/pdf/large-format-printing/acrylic-sign-boards.pdf",
+            "pdf/Large Format Printing Catalog.pdf",
 
         minimumQty:
             "1",
@@ -2447,7 +2447,7 @@ const products = [
         thumbnail:
             "assets/images/products/large-format-printing/led-sign-board-thumb.webp",
         pdf:
-            "assets/pdf/large-format-printing/led-sign-boards.pdf",
+            "pdf/Large Format Printing Catalog.pdf",
 
         minimumQty: "1",
         features: [
@@ -2507,7 +2507,7 @@ const products = [
         thumbnail:
             "assets/images/products/large-format-printing/hanging-sign-board-thumb.webp",
         pdf:
-            "assets/pdf/large-format-printing/hanging-sign-boards.pdf",
+            "pdf/Large Format Printing Catalog.pdf",
 
         minimumQty: "1",
         features: [
@@ -2564,7 +2564,7 @@ const products = [
         thumbnail:
             "assets/images/products/large-format-printing/backlit-sign-board-thumb.webp",
         pdf:
-            "assets/pdf/large-format-printing/backlit-sign-boards.pdf",
+            "pdf/Large Format Printing Catalog.pdf",
 
         minimumQty: "1",
         features: [
@@ -2617,7 +2617,7 @@ const products = [
         id: 32,
         slug: "velvet-cards",
         type: "product",
-        category: "premium-printing",
+        category: "Premium Printing",
         categoryName: "Premium Printing",
         name: "Velvet Cards",
         shortDescription:
@@ -2629,7 +2629,7 @@ const products = [
         thumbnail:
             "assets/images/products/premium/velvet-cards-thumb.webp",
         pdf:
-            "assets/pdf/premium/velvet-cards.pdf",
+            "pdf/Premium Printing Catalog.pdf",
 
         minimumQty:
             "500",
@@ -2680,7 +2680,7 @@ const products = [
         id: 33,
         slug: "gold-foil-printing",
         type: "product",
-        category: "premium-printing",
+        category: "Premium Printing",
         categoryName: "Premium Printing",
         name: "Gold Foil Printing",
         shortDescription:
@@ -2692,7 +2692,7 @@ const products = [
         thumbnail:
             "assets/images/products/premium/gold-foil-thumb.webp",
         pdf:
-            "assets/pdf/premium/gold-foil-printing.pdf",
+            "pdf/Premium Printing Catalog.pdf",
 
         minimumQty:
             "500",
@@ -2740,7 +2740,7 @@ const products = [
         id: 34,
         slug: "luxury-packaging",
         type: "product",
-        category: "premium-printing",
+        category: "Premium Printing",
         categoryName: "Premium Printing",
         name: "Luxury Packaging",
         shortDescription:
@@ -2752,7 +2752,7 @@ const products = [
         thumbnail:
             "assets/images/products/premium/luxury-packaging-thumb.webp",
         pdf:
-            "assets/pdf/premium/luxury-packaging.pdf",
+            "pdf/Premium Printing Catalog.pdf",
 
         minimumQty:
             "100",
@@ -2805,7 +2805,7 @@ const products = [
         id: 35,
         slug: "wedding-cards",
         type: "product",
-        category: "wedding-printing",
+        category: "Wedding Printing",
         categoryName: "Wedding Printing",
         name: "Wedding Cards",
         shortDescription:
@@ -2817,7 +2817,7 @@ const products = [
         thumbnail:
             "assets/images/products/wedding/wedding-cards-thumb.webp",
         pdf:
-            "assets/pdf/wedding/wedding-cards.pdf",
+            "pdf/Wedding Printing Catalog.pdf",
 
         minimumQty: "100",
         features: [
@@ -2868,7 +2868,7 @@ const products = [
         id: 36,
         slug: "invitation-cards",
         type: "product",
-        category: "wedding-printing",
+        category: "Wedding Printing",
         categoryName: "Wedding Printing",
         name: "Invitation Cards",
         shortDescription:
@@ -2880,7 +2880,7 @@ const products = [
         thumbnail:
             "assets/images/products/wedding/invitation-cards-thumb.webp",
         pdf:
-            "assets/pdf/wedding/invitation-cards.pdf",
+            "pdf/Wedding Printing Catalog.pdf",
 
         minimumQty: "100",
         features: [
@@ -2928,7 +2928,7 @@ const products = [
         id: 37,
         slug: "wedding-gift-envelopes",
         type: "product",
-        category: "wedding-printing",
+        category: "Wedding Printing",
         categoryName: "Wedding Printing",
         name: "Wedding Gift Envelopes",
         shortDescription:
@@ -2940,7 +2940,7 @@ const products = [
         thumbnail:
             "assets/images/products/wedding/gift-cover-thumb.webp",
         pdf:
-            "assets/pdf/wedding/gift-envelopes.pdf",
+            "pdf/Wedding Printing Catalog.pdf",
 
         minimumQty: "100",
         features: [
@@ -2987,7 +2987,7 @@ const products = [
         id: 38,
         slug: "digital-wedding-cards",
         type: "service",
-        category: "wedding-printing",
+        category: "Wedding Printing",
         categoryName: "Wedding Printing",
         name: "Digital Wedding Cards",
         shortDescription:
@@ -2999,7 +2999,7 @@ const products = [
         thumbnail:
             "assets/images/products/wedding/digital-wedding-card-thumb.webp",
         pdf:
-            "assets/pdf/wedding/digital-wedding-card.pdf",
+            "pdf/Wedding Printing Catalog.pdf",
 
         minimumQty: "1",
         features: [
@@ -3043,7 +3043,7 @@ const products = [
         id: 39,
         slug: "video-invitations",
         type: "service",
-        category: "wedding-printing",
+        category: "Wedding Printing",
         categoryName: "Wedding Printing",
         name: "Video Invitations",
         shortDescription:
@@ -3055,7 +3055,7 @@ const products = [
         thumbnail:
             "assets/images/products/wedding/video-invitation-thumb.webp",
         pdf:
-            "assets/pdf/wedding/video-invitation.pdf",
+            "pdf/Wedding Printing Catalog.pdf",
 
         minimumQty: "1",
         features: [
@@ -3103,7 +3103,7 @@ const products = [
         id: 40,
         slug: "graphic-design",
         type: "service",
-        category: "digital-solutions",
+        category: "Digital Solutions",
         categoryName: "Digital Solutions",
         name: "Graphic Design",
         shortDescription:
@@ -3115,7 +3115,7 @@ const products = [
         thumbnail:
             "assets/images/products/digital-services/graphic-design-thumb.webp",
         pdf:
-            "assets/pdf/digital-services/graphic-design.pdf",
+            "pdf/Digital Solutions Catalog.pdf",
 
         minimumQty:
             "Project Based",
@@ -3168,7 +3168,7 @@ const products = [
         id: 41,
         slug: "logo-design",
         type: "service",
-        category: "digital-solutions",
+        category: "Digital Solutions",
         categoryName: "Digital Solutions",
         name: "Logo Design",
         shortDescription:
@@ -3180,7 +3180,7 @@ const products = [
         thumbnail:
             "assets/images/products/digital-services/logo-design-thumb.webp",
         pdf:
-            "assets/pdf/digital-services/logo-design.pdf",
+            "pdf/Digital Solutions Catalog.pdf",
         minimumQty:
             "Project Based",
         features: [
@@ -3224,7 +3224,7 @@ const products = [
         id: 42,
         slug: "digital-marketing",
         type: "service",
-        category: "digital-solutions",
+        category: "Digital Solutions",
         categoryName: "Digital Solutions",
         name: "Digital Marketing",
         shortDescription:
@@ -3236,7 +3236,7 @@ const products = [
         thumbnail:
             "assets/images/products/digital-services/digital-marketing-thumb.webp",
         pdf:
-            "assets/pdf/digital-services/digital-marketing.pdf",
+            "pdf/Digital Solutions Catalog.pdf",
 
         minimumQty:
             "Monthly",
@@ -3284,7 +3284,7 @@ const products = [
         id: 43,
         slug: "website-development",
         type: "service",
-        category: "digital-solutions",
+        category: "Digital Solutions",
         categoryName: "Digital Solutions",
         name: "Website Development",
         shortDescription:
@@ -3296,7 +3296,7 @@ const products = [
         thumbnail:
             "assets/images/products/digital-services/website-development-thumb.webp",
         pdf:
-            "assets/pdf/digital-services/website-development.pdf",
+            "pdf/Digital Solutions Catalog.pdf",
         minimumQty:
             "Project Based",
 
