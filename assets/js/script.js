@@ -316,6 +316,8 @@ function createProductCard(product) {
                 src="${product.image}"
                 alt="${product.name}"
                 class="product-image"
+                loading="lazy"
+                decoding="async"
                 onerror="
                 this.src='https://placehold.co/600x400/f8fafc/0072ff?text=Gujarat+Printlink'
                 ">
@@ -499,17 +501,105 @@ searchInput.addEventListener("keyup", function () {
 
     }
 
-    const results =
+    const searchSynonyms = {
 
-        products.filter(product =>
+        "visiting card": "business card",
+        "visiting cards": "business card",
 
-            product.name.toLowerCase().includes(keyword)
+        "name card": "business card",
 
-            ||
+        "card": "business card",
 
-            product.category.toLowerCase().includes(keyword)
+        "pamphlet": "flyer",
 
-        );
+        "leaflet": "flyer",
+
+        "folder": "file",
+
+        "box": "packaging",
+
+        "sticker": "label",
+
+        "label": "sticker",
+
+        "website": "website development",
+
+        "web": "website development",
+
+        "logo": "logo design",
+
+        "social media": "digital marketing"
+
+    };
+
+    const results = products
+        .map(product => {
+
+            let score = 0;
+
+            const search = keyword.toLowerCase();
+
+            // Highest Priority
+            if (product.name.toLowerCase().includes(search))
+                score += 100;
+
+            // Category
+            if (product.category.toLowerCase().includes(search))
+                score += 40;
+
+            // Description
+            if (
+                product.description &&
+                product.description.toLowerCase().includes(search)
+            )
+                score += 30;
+
+            // Features
+            if (
+                product.features &&
+                product.features.some(feature =>
+                    feature.toLowerCase().includes(search)
+                )
+            )
+                score += 20;
+
+            // Tags
+            if (
+                product.tags &&
+                product.tags.some(tag =>
+                    tag.toLowerCase().includes(search)
+                )
+            )
+                score += 80;
+
+            // SEO Keywords
+            if (
+                product.seo &&
+                product.seo.keywords &&
+                product.seo.keywords.some(key =>
+                    key.toLowerCase().includes(search)
+                )
+            )
+                score += 60;
+
+            // Aliases
+            if (
+                product.searchAliases &&
+                product.searchAliases.some(alias =>
+                    alias.toLowerCase().includes(search)
+                )
+            )
+                score += 90;
+
+            return {
+                product,
+                score
+            };
+
+        })
+        .filter(item => item.score > 0)
+        .sort((a, b) => b.score - a.score)
+        .map(item => item.product);
 
     suggestionBox.innerHTML = "";
 
@@ -649,7 +739,8 @@ function openProductModal(productId) {
         class="img-fluid rounded mb-4"
 
         alt="${product.name}"
-
+        loading="lazy"
+        decoding="async"
         onerror="
         this.src='https://placehold.co/800x500/f8fafc/0072ff?text=Gujarat+Printlink'
         ">
