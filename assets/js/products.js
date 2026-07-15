@@ -438,6 +438,107 @@ const products = [
     },
 
     {
+        id: 43,
+        slug: "stationery-supplies",
+
+        category: "Business Printing",
+        categoryName: "Business Printing",
+
+        name: "Stationery Supplies",
+        shortDescription:
+            "Complete stationery supplies for businesses, schools, offices and corporate needs.",
+        description:
+            "We provide a complete range of office stationery supplies for businesses, schools, institutions and corporate organizations. All products are available with custom branding and printing.",
+        image:
+            "assets/images/products/business-printing/office-stationery-supplies.jpg",
+        thumbnail:
+            "assets/images/products/business-printing/office-stationery-supplies-thumb.webp",
+        pdf:
+            "pdf/Business Printing Catalog.pdf",
+
+        searchAliases: [
+            "Packet Papper",
+            "Protective Sheet",
+            "Button Folder",
+            "Box Files",
+            "L Shape Folder",
+            "Pens",
+            "Clip Board",
+            "Note Pads",
+            "Memo Pads"
+        ],
+        minimumQty:
+            "100",
+
+        features: [
+            "Packet Papper",
+            "Protective Sheet",
+            "Button Folder",
+            "Box Files",
+            "L Shape Folder",
+            "Pens",
+            "Clip Board",
+            "Note Pads",
+            "Memo Pads"
+        ],
+
+        featured: true,
+        popular: true,
+        badge: "Featured",
+        priority: 1,
+        isNew: false,
+        order: 43,
+        status: "active",
+        tags: [
+            "Packet Papper",
+            "Protective Sheet",
+            "Button Folder",
+            "Box Files",
+            "L Shape Folder",
+            "Pens",
+            "Clip Board",
+            "Note Pads",
+            "Memo Pads",
+            "Packet Papper",
+            "Protective Sheet",
+            "Button Folder",
+            "Box Files",
+            "L Shape Folder",
+            "Pens",
+            "Clip Board",
+            "Note Pads",
+            "Memo Pads"
+        ],
+
+        seo: {
+            title:
+                "Stationery Supplies in Ahmedabad | Gujarat Printlink",
+            description:
+                "Complete range of office stationery supplies for businesses, schools, institutions and corporate organizations.",
+            keywords: [
+                "Packet Papper",
+                "Protective Sheet",
+                "Button Folder",
+                "Box Files",
+                "L Shape Folder",
+                "Pens",
+                "Clip Board",
+                "Note Pads",
+                "Memo Pads",
+                "Packet Papper",
+                "Protective Sheet",
+                "Button Folder",
+                "Box Files",
+                "L Shape Folder",
+                "Pens",
+                "Clip Board",
+                "Note Pads",
+                "Memo Pads"
+            ]
+        }
+    },
+
+    {
         id: 4,
         slug: "id-cards",
 
@@ -1761,6 +1862,763 @@ const products = [
 
     },
 
+    /* =====================================
+        Healthcare Printing
+    ===================================== */
+
+    {
+        /* ==========================================================
+           IDENTIFICATION
+        ========================================================== */
+        id: 45,
+        slug: "doctor-files",
+
+        /* ==========================================================
+           CATEGORY
+        ========================================================== */
+        category: "Healthcare Printing",
+        categoryName: "Healthcare Printing",
+
+        /* ==========================================================
+           PRODUCT INFORMATION
+        ========================================================== */
+        name: "Doctor Files",
+        shortDescription:
+            "Professional hospital and clinic document folders.",
+        description:
+            "Custom printed doctor files and medical folders designed for hospitals, clinics, diagnostic centers and healthcare professionals. Ideal for organizing patient records, reports and prescriptions with premium printing and durable finishing.",
+        image:
+            "assets/images/products/healthcare-printing/doctor-files.jpg",
+        thumbnail:
+            "assets/images/products/healthcare-printing/doctor-files.jpg",
+        pdf:
+            "pdf/Healthcare Printing Catalog.pdf",
+
+        minimumQty:
+            "100",
+
+        features: [
+            "Premium Art Card",
+            "Matt Lamination",
+            "Gloss Lamination",
+            "Hospital Branding",
+            "Pocket Folder",
+            "Custom Size",
+            "Offset Printing",
+            "Digital Printing",
+            "High Quality Finish",
+            "Durable Material"
+        ],
+
+        searchAliases: [
+            "doctor file",
+            "medical file",
+            "hospital file",
+            "patient file",
+            "clinic file",
+            "medical folder",
+            "hospital folder",
+            "patient folder",
+            "doctor folder",
+            "report file",
+            "healthcare file"
+        ],
+
+        featured: true,
+        popular: true,
+        badge: "Popular",
+        isNew: false,
+        order: 45,
+        status: "active",
+
+        tags: [
+            "doctor files",
+            "doctor file printing",
+            "medical files",
+            "medical file printing",
+            "hospital files",
+            "hospital file printing",
+            "clinic files",
+            "clinic file printing",
+            "patient file",
+            "patient record file",
+            "medical folder",
+            "doctor folder",
+            "hospital folder",
+            "clinic folder",
+            "medical record folder",
+            "patient report folder",
+            "healthcare stationery",
+            "hospital stationery",
+            "doctor stationery",
+            "custom doctor files",
+            "printed medical files",
+            "hospital branding",
+            "medical document folder",
+            "A4 doctor files",
+            "doctor case file",
+            "medical office supplies",
+            "hospital office stationery",
+            "healthcare printing Ahmedabad",
+            "doctor file manufacturer",
+            "doctor file supplier"
+        ],
+
+        seo: {
+            title:
+                "Doctor File Printing in Ahmedabad | Gujarat Printlink",
+            description:
+                "Premium doctor files and hospital folders with custom branding for hospitals, clinics and healthcare centers.",
+            keywords: [
+                "doctor files",
+                "doctor file printing",
+                "medical files",
+                "medical file printing",
+                "hospital files",
+                "hospital file printing",
+                "clinic files",
+                "clinic file printing",
+                "patient file",
+                "patient record file",
+                "medical folder",
+                "doctor folder",
+                "hospital folder",
+                "clinic folder",
+                "medical record folder",
+                "patient report folder",
+                "healthcare stationery",
+                "hospital stationery",
+                "doctor stationery",
+                "custom doctor files",
+                "printed medical files",
+                "hospital branding",
+                "medical document folder",
+                "A4 doctor files",
+                "doctor case file",
+                "medical office supplies",
+                "hospital office stationery",
+                "healthcare printing Ahmedabad",
+                "doctor file manufacturer",
+                "doctor file supplier"
+            ]
+        }
+    },
+
+    {
+        id: 46,
+        slug: "ct-scan-mri-film-bags",
+
+        category: "Healthcare Printing",
+        categoryName: "Healthcare Printing",
+
+        name: "CT Scan / MRI Film Bags",
+        shortDescription:
+            "Custom printed diagnostic film bags.",
+        description:
+            "Premium CT Scan, MRI, X-Ray and diagnostic film bags with custom hospital branding, durable paper or plastic materials and high-quality printing.",
+
+        image:
+            "assets/images/products/healthcare-printing/ct-scan-mri-film-bags.jpg",
+        thumbnail:
+            "assets/images/products/healthcare-printing/ct-scan-mri-film-bags-thumb.webp",
+        pdf:
+            "pdf/Healthcare Printing Catalog.pdf",
+
+        minimumQty:
+            "500",
+
+        features: [
+            "Hospital Branding",
+            "Custom Size",
+            "Paper Bags",
+            "Plastic Bags",
+            "High GSM",
+            "Water Resistant",
+            "Offset Printing",
+            "Digital Printing",
+            "Durable Finish",
+            "Premium Quality"
+        ],
+
+        searchAliases: [
+            "ct scan bag",
+            "mri bag",
+            "film bag",
+            "xray bag",
+            "diagnostic bag",
+            "hospital bag",
+            "medical bag",
+            "scan film cover"
+        ],
+
+        featured: true,
+        popular: true,
+        badge: "Best Seller",
+        isNew: false,
+        order: 46,
+        status: "active",
+
+        tags: [
+            "CT scan bags",
+            "MRI film bags",
+            "X-ray film bags",
+            "diagnostic film bags",
+            "medical film bags",
+            "hospital film bags",
+            "scan report bags",
+            "CT scan cover",
+            "MRI cover",
+            "X-ray cover",
+            "radiology bags",
+            "diagnostic center bags",
+            "hospital report bags",
+            "patient report bags",
+            "medical report bags",
+            "film envelope",
+            "medical envelopes",
+            "hospital envelopes",
+            "printed film bags",
+            "custom MRI bags",
+            "custom CT scan bags",
+            "hospital branding bags",
+            "medical carry bags",
+            "healthcare packaging",
+            "diagnostic packaging",
+            "hospital printing",
+            "medical printing Ahmedabad",
+            "MRI bag printing",
+            "CT scan bag manufacturer",
+            "diagnostic bag supplier"
+        ],
+
+        seo: {
+            title:
+                "CT Scan & MRI Film Bag Printing | Gujarat Printlink",
+            description:
+                "Premium CT Scan, MRI and diagnostic film bags with custom branding for hospitals and diagnostic centers.",
+            keywords: [
+                "CT scan bags",
+                "MRI film bags",
+                "X-ray film bags",
+                "diagnostic film bags",
+                "medical film bags",
+                "hospital film bags",
+                "scan report bags",
+                "CT scan cover",
+                "MRI cover",
+                "X-ray cover",
+                "radiology bags",
+                "diagnostic center bags",
+                "hospital report bags",
+                "patient report bags",
+                "medical report bags",
+                "film envelope",
+                "medical envelopes",
+                "hospital envelopes",
+                "printed film bags",
+                "custom MRI bags",
+                "custom CT scan bags",
+                "hospital branding bags",
+                "medical carry bags",
+                "healthcare packaging",
+                "diagnostic packaging",
+                "hospital printing",
+                "medical printing Ahmedabad",
+                "MRI bag printing",
+                "CT scan bag manufacturer",
+                "diagnostic bag supplier"
+            ]
+        }
+    },
+
+    {
+        id: 47,
+        slug: "medical-letterheads",
+
+        category: "Healthcare Printing",
+        categoryName: "Healthcare Printing",
+
+        name: "Letterheads",
+        shortDescription:
+            "Professional medical letterhead printing.",
+        description:
+            "Premium hospital and clinic letterheads for prescriptions, reports, referrals and official healthcare communication.",
+
+        image:
+            "assets/images/products/healthcare-printing/medical-letterheads.jpg",
+        thumbnail:
+            "assets/images/products/healthcare-printing/letterheads-thumb.webp",
+        pdf:
+            "pdf/Healthcare Printing Catalog.pdf",
+
+        minimumQty:
+            "500",
+
+        features: [
+            "100 GSM Paper",
+            "Bond Paper",
+            "Offset Printing",
+            "Digital Printing",
+            "Hospital Branding",
+            "Doctor Logo",
+            "Custom Design",
+            "Premium Finish"
+        ],
+
+        searchAliases: [
+            "doctor letterhead",
+            "hospital letterhead",
+            "clinic letterhead",
+            "medical letterhead",
+            "prescription letterhead"
+        ],
+
+        featured: false,
+        popular: true,
+        badge: "",
+        isNew: false,
+        order: 47,
+        status: "active",
+
+        tags: [
+            "medical letterhead",
+            "doctor letterhead",
+            "hospital letterhead",
+            "clinic letterhead",
+            "hospital stationery",
+            "doctor stationery",
+            "clinic stationery",
+            "medical stationery",
+            "doctor prescription letterhead",
+            "hospital document paper",
+            "medical office stationery",
+            "doctor office letterhead",
+            "custom medical letterhead",
+            "printed letterhead",
+            "hospital branding",
+            "healthcare printing",
+            "medical printing",
+            "offset letterhead printing",
+            "digital letterhead printing",
+            "A4 letterhead",
+            "professional letterhead",
+            "doctor clinic printing",
+            "medical practice stationery",
+            "hospital administration stationery",
+            "referral letterhead",
+            "clinic branding",
+            "healthcare stationery Ahmedabad",
+            "letterhead printing Ahmedabad",
+            "medical letterhead supplier",
+            "doctor letterhead printing"
+        ],
+
+        seo: {
+            title:
+                "Medical Letterhead Printing | Gujarat Printlink",
+            description:
+                "Premium doctor, hospital and clinic letterhead printing with professional branding.",
+            keywords: [
+                "medical letterhead",
+                "doctor letterhead",
+                "hospital letterhead",
+                "clinic letterhead",
+                "hospital stationery",
+                "doctor stationery",
+                "clinic stationery",
+                "medical stationery",
+                "doctor prescription letterhead",
+                "hospital document paper",
+                "medical office stationery",
+                "doctor office letterhead",
+                "custom medical letterhead",
+                "printed letterhead",
+                "hospital branding",
+                "healthcare printing",
+                "medical printing",
+                "offset letterhead printing",
+                "digital letterhead printing",
+                "A4 letterhead",
+                "professional letterhead",
+                "doctor clinic printing",
+                "medical practice stationery",
+                "hospital administration stationery",
+                "referral letterhead",
+                "clinic branding",
+                "healthcare stationery Ahmedabad",
+                "letterhead printing Ahmedabad",
+                "medical letterhead supplier",
+                "doctor letterhead printing"
+            ]
+        }
+    },
+
+    {
+        id: 48,
+        slug: "prescription-pads",
+
+        category: "Healthcare Printing",
+        categoryName: "Healthcare Printing",
+
+        name: "Prescription Pads",
+        shortDescription:
+            "Custom doctor prescription pad printing.",
+        description:
+            "High-quality prescription pads for doctors, hospitals and clinics with personalized branding, numbering and premium paper.",
+
+        image:
+            "assets/images/products/healthcare-printing/prescription-pads.jpg",
+        thumbnail:
+            "assets/images/products/healthcare-printing/prescription-pads-thumb.webp",
+        pdf:
+            "pdf/Healthcare Printing Catalog.pdf",
+
+        minimumQty:
+            "100",
+
+        features: [
+            "100 GSM Paper",
+            "Numbering",
+            "Hospital Logo",
+            "Doctor Details",
+            "Multi Color Printing",
+            "Easy Tear Pads",
+            "Premium Finish"
+        ],
+
+        searchAliases: [
+            "prescription pad",
+            "doctor pad",
+            "rx pad",
+            "medical pad",
+            "clinic prescription"
+        ],
+
+        featured: true,
+        popular: true,
+        badge: "Popular",
+        isNew: false,
+        order: 48,
+        status: "active",
+
+        tags: [
+            "prescription pads",
+            "doctor prescription pads",
+            "medical prescription pads",
+            "doctor pad",
+            "doctor writing pad",
+            "hospital prescription pad",
+            "clinic prescription pad",
+            "RX pad",
+            "Rx prescription pad",
+            "medical writing pad",
+            "doctor notepad",
+            "doctor prescription book",
+            "hospital stationery",
+            "clinic stationery",
+            "custom prescription pads",
+            "printed prescription pads",
+            "doctor office stationery",
+            "medical forms",
+            "doctor prescription printing",
+            "hospital prescription printing",
+            "prescription book",
+            "doctor memo pad",
+            "medical pad printing",
+            "healthcare stationery",
+            "offset prescription pads",
+            "digital prescription pads",
+            "doctor clinic printing",
+            "prescription pad Ahmedabad",
+            "doctor pad supplier",
+            "medical printing Ahmedabad"
+        ],
+
+        seo: {
+            title:
+                "Prescription Pad Printing | Gujarat Printlink",
+            description:
+                "Premium custom prescription pad printing for doctors, hospitals and clinics.",
+            keywords: [
+                "prescription pads",
+                "doctor prescription pads",
+                "medical prescription pads",
+                "doctor pad",
+                "doctor writing pad",
+                "hospital prescription pad",
+                "clinic prescription pad",
+                "RX pad",
+                "Rx prescription pad",
+                "medical writing pad",
+                "doctor notepad",
+                "doctor prescription book",
+                "hospital stationery",
+                "clinic stationery",
+                "custom prescription pads",
+                "printed prescription pads",
+                "doctor office stationery",
+                "medical forms",
+                "doctor prescription printing",
+                "hospital prescription printing",
+                "prescription book",
+                "doctor memo pad",
+                "medical pad printing",
+                "healthcare stationery",
+                "offset prescription pads",
+                "digital prescription pads",
+                "doctor clinic printing",
+                "prescription pad Ahmedabad",
+                "doctor pad supplier",
+                "medical printing Ahmedabad"
+            ]
+        }
+    },
+
+    {
+        id: 49,
+        slug: "medical-reference-books",
+
+        category: "Healthcare Printing",
+        categoryName: "Healthcare Printing",
+
+        name: "Reference Books",
+        shortDescription:
+            "Medical books and healthcare manuals.",
+        description:
+            "Professional printing of medical reference books, healthcare manuals, laboratory guides and educational publications.",
+
+        image:
+            "assets/images/products/healthcare-printing/reference-books.jpg",
+        thumbnail:
+            "assets/images/products/healthcare-printing/reference-books-thumb.webp",
+        pdf:
+            "pdf/Healthcare Printing Catalog.pdf",
+
+        minimumQty:
+            "100",
+
+        features: [
+            "Perfect Binding",
+            "Hard Bound",
+            "Soft Cover",
+            "Premium Paper",
+            "Color Printing",
+            "Black & White",
+            "Bulk Printing"
+        ],
+
+        searchAliases: [
+            "medical book",
+            "hospital book",
+            "reference book",
+            "manual printing",
+            "healthcare books"
+        ],
+
+        featured: false,
+        popular: false,
+        badge: "",
+        isNew: false,
+        order: 49,
+        status: "active",
+
+        tags: [
+            "medical reference books",
+            "medical books printing",
+            "hospital reference books",
+            "healthcare books",
+            "medical manuals",
+            "hospital manuals",
+            "clinic manuals",
+            "laboratory manuals",
+            "medical guide books",
+            "doctor reference books",
+            "medical publications",
+            "medical textbooks",
+            "medical journals printing",
+            "hospital handbook",
+            "medical handbook",
+            "training manuals",
+            "healthcare publications",
+            "medical catalog printing",
+            "book printing",
+            "perfect binding books",
+            "hardbound books",
+            "soft cover books",
+            "medical educational books",
+            "medical booklet printing",
+            "healthcare documentation",
+            "medical printing",
+            "book printing Ahmedabad",
+            "medical publication printing",
+            "reference book manufacturer",
+            "medical book supplier"
+        ],
+
+        seo: {
+            title:
+                "Medical Book Printing | Gujarat Printlink",
+            description:
+                "Professional printing of medical books, healthcare manuals and hospital publications.",
+            keywords: [
+                "medical reference books",
+                "medical books printing",
+                "hospital reference books",
+                "healthcare books",
+                "medical manuals",
+                "hospital manuals",
+                "clinic manuals",
+                "laboratory manuals",
+                "medical guide books",
+                "doctor reference books",
+                "medical publications",
+                "medical textbooks",
+                "medical journals printing",
+                "hospital handbook",
+                "medical handbook",
+                "training manuals",
+                "healthcare publications",
+                "medical catalog printing",
+                "book printing",
+                "perfect binding books",
+                "hardbound books",
+                "soft cover books",
+                "medical educational books",
+                "medical booklet printing",
+                "healthcare documentation",
+                "medical printing",
+                "book printing Ahmedabad",
+                "medical publication printing",
+                "reference book manufacturer",
+                "medical book supplier"
+            ]
+        }
+    },
+
+    {
+        id: 50,
+        slug: "medical-carry-bags",
+
+        category: "Healthcare Printing",
+        categoryName: "Healthcare Printing",
+
+        name: "BOPP Plastic, Non Woven & Paper Bags",
+        shortDescription:
+            "Custom branded hospital carry bags.",
+        description:
+            "Premium BOPP plastic, non-woven and paper bags for hospitals, pharmacies, laboratories and healthcare businesses with custom branding and durable materials.",
+
+        image:
+            "assets/images/products/healthcare-printing/medical-carry-bags.jpg",
+        thumbnail:
+            "assets/images/products/healthcare-printing/medical-carry-bags-thumb.webp",
+        pdf:
+            "pdf/Healthcare Printing Catalog.pdf",
+
+        minimumQty:
+            "500",
+
+        features: [
+            "BOPP Plastic",
+            "Paper Bags",
+            "Non Woven Bags",
+            "Hospital Branding",
+            "Reusable",
+            "Eco Friendly",
+            "Offset Printing",
+            "Multi Color Printing"
+        ],
+
+        searchAliases: [
+            "medical bags",
+            "hospital bags",
+            "pharmacy bags",
+            "paper bag",
+            "non woven bag",
+            "plastic bag",
+            "bopp bag"
+        ],
+
+        featured: true,
+        popular: true,
+        badge: "Eco Friendly",
+        isNew: false,
+        order: 50,
+        status: "active",
+
+        tags: [
+            "hospital paper bags",
+            "medical paper bags",
+            "pharmacy paper bags",
+            "doctor paper bags",
+            "hospital plastic bags",
+            "medical plastic bags",
+            "BOPP plastic bags",
+            "non woven bags",
+            "non woven hospital bags",
+            "hospital carry bags",
+            "medical carry bags",
+            "clinic carry bags",
+            "pharmacy carry bags",
+            "medicine bags",
+            "custom hospital bags",
+            "printed paper bags",
+            "printed non woven bags",
+            "printed plastic bags",
+            "hospital branding bags",
+            "healthcare packaging",
+            "medical packaging",
+            "eco friendly bags",
+            "reusable bags",
+            "shopping bags printing",
+            "pharmacy packaging",
+            "hospital promotional bags",
+            "paper bag printing Ahmedabad",
+            "non woven bag manufacturer",
+            "plastic bag supplier",
+            "custom packaging bags"
+        ],
+
+        seo: {
+            title:
+                "Hospital Paper, Plastic & Non Woven Bags | Gujarat Printlink",
+            description:
+                "Premium custom branded BOPP plastic, non-woven and paper bags for hospitals, pharmacies and healthcare businesses.",
+            keywords: [
+                "hospital paper bags",
+                "medical paper bags",
+                "pharmacy paper bags",
+                "doctor paper bags",
+                "hospital plastic bags",
+                "medical plastic bags",
+                "BOPP plastic bags",
+                "non woven bags",
+                "non woven hospital bags",
+                "hospital carry bags",
+                "medical carry bags",
+                "clinic carry bags",
+                "pharmacy carry bags",
+                "medicine bags",
+                "custom hospital bags",
+                "printed paper bags",
+                "printed non woven bags",
+                "printed plastic bags",
+                "hospital branding bags",
+                "healthcare packaging",
+                "medical packaging",
+                "eco friendly bags",
+                "reusable bags",
+                "shopping bags printing",
+                "pharmacy packaging",
+                "hospital promotional bags",
+                "paper bag printing Ahmedabad",
+                "non woven bag manufacturer",
+                "plastic bag supplier",
+                "custom packaging bags"
+            ]
+        }
+    },
+
 
     /* =====================================
        MARKETING
@@ -1779,7 +2637,7 @@ const products = [
         ========================================================== */
 
         category: "Marketing",
-        categoryName: "Marketing",
+        categoryName: "Marketing Materials",
 
         /* ==========================================================
            PRODUCT INFORMATION
@@ -1970,7 +2828,7 @@ const products = [
         slug: "brochures-catalogues",
 
         category: "Marketing",
-        categoryName: "Marketing",
+        categoryName: "Marketing Materials",
 
         name: "Brochures & Catalogues",
 
@@ -2180,7 +3038,7 @@ const products = [
         slug: "company-profiles",
 
         category: "Marketing",
-        categoryName: "Marketing",
+        categoryName: "Marketing Materials",
 
         name: "Company Profiles",
 
@@ -2325,7 +3183,7 @@ const products = [
         slug: "booklets",
 
         category: "Marketing",
-        categoryName: "Marketing",
+        categoryName: "Marketing Materials",
 
         name: "Booklets",
 
@@ -2469,6 +3327,102 @@ const products = [
     /* =====================================
        PACKAGING
     ===================================== */
+    {
+        id: 44,
+        slug: "BOPP Plastic / Non Woven / Paper Bags",
+
+        category: "Packaging",
+        categoryName: "Packaging",
+
+        name: "BOPP Plastic / Non Woven / Paper Bags",
+        shortDescription:
+            "BOPP Plastic / Non Woven / Paper Bags",
+        description:
+            "We provide a complete range of BOPP Plastic / Non Woven / Paper Bags for businesses, schools, institutions and corporate organizations. All products are available with custom branding and printing.",
+        image:
+            "assets/images/products/packaging/bopp-plastic-non-woven-paper-bags.jpg",
+        thumbnail:
+            "assets/images/products/packaging/bopp-plastic-non-woven-paper-bags-thumb.webp",
+        pdf:
+            "pdf/BOPP Plastic Non Woven Paper Bags.pdf",
+
+        searchAliases: [
+            "BOPP Plastic Bags",
+            "Non Woven Bags",
+            "Paper Bags",
+            "Box Files",
+            "Bagss",
+            "Plastic Bags",
+            "Cloth Bags"
+        ],
+        minimumQty:
+            "100",
+
+        features: [
+            "BOPP Plastic Bags",
+            "Non Woven Bags",
+            "Paper Bags",
+            "Bagss",
+            "Plastic Bags",
+            "Cloth Bags"
+        ],
+
+        featured: true,
+        popular: true,
+        badge: "Featured",
+        priority: 1,
+        isNew: false,
+        order: 44,
+        status: "active",
+        tags: [
+            "BOPP Plastic Bags",
+            "Plastic Bags Supplier Ahmedabad",
+            "Non Woven Bags Manufacturer Gujarat",
+            "Non Woven Bags",
+            "Non Woven Bags Ahmedabad",
+            "Paper Bags",
+            "Paper Bags Ahmedabad",
+            "Paper Bags Supplier Gujarat",
+            "Bagss",
+            "Bagss Supplier Ahmedabad",
+            "Bagss Manufacturer Gujarat",
+            "Plastic Bagss",
+            "Plastic Bags Ahmedabad",
+            "Plastic Bags Supplier Gujarat",
+            "Cloth Bags",
+            "Cloth Bags Ahmedabad",
+            "Cloth Bags Supplier Gujarat",
+            "Cloth Bags Manufacturer Gujarat",
+            "Cloth Bags Manufacturer Ahmedabad",
+        ],
+
+        seo: {
+            title:
+                "Stationery Supplies in Ahmedabad | Gujarat Printlink",
+            description:
+                "Complete range of office stationery supplies for businesses, schools, institutions and corporate organizations.",
+            keywords: [
+                "Packet Papper",
+                "Protective Sheet",
+                "Button Folder",
+                "Box Files",
+                "L Shape Folder",
+                "Pens",
+                "Clip Board",
+                "Note Pads",
+                "Memo Pads",
+                "Packet Papper",
+                "Protective Sheet",
+                "Button Folder",
+                "Box Files",
+                "L Shape Folder",
+                "Pens",
+                "Clip Board",
+                "Note Pads",
+                "Memo Pads"
+            ]
+        }
+    },
 
     {
         /* ==========================================================
@@ -5962,7 +6916,7 @@ const products = [
         popular: true,
         badge: "Trending",
         priority: 1,
-        isNew: true,
+        isNew: false,
         order: 38,
         status: "active",
         tags: [
@@ -6095,7 +7049,7 @@ const products = [
         popular: true,
         badge: "Digital",
         priority: 1,
-        isNew: true,
+        isNew: false,
         order: 39,
         status: "active",
         tags: [
@@ -6475,7 +7429,7 @@ const products = [
         popular: true,
         badge: "Featured",
         priority: 1,
-        isNew: true,
+        isNew: false,
         order: 42,
         status: "active",
         tags: [
